@@ -40,10 +40,10 @@ function Sobre() {
                         </div>
                         <h3>Débora Santos</h3>
                         <Box className='socialPerfil'>
-                            <a href="https://www.linkedin.com/in/wanessa-koserski-dos-santos/" target="_blank">
+                            <a href="https://www.linkedin.com/in/d%C3%A9bora-gaspar-b6bab517b" target="_blank">
                                 <LinkedIn style={{ fontSize: 50 }} />
                             </a>
-                            <a href="https://github.com/wanessakoserski" target="_blank">
+                            <a href="https://github.com/DeboraGaspar" target="_blank">
                                 <GitHub style={{ fontSize: 40 }} />
                             </a>
                         </Box>
@@ -68,10 +68,10 @@ function Sobre() {
                         </div>
                         <h3>Luan Piauilino</h3>
                         <Box className='socialPerfil'>
-                            <a href="https://www.linkedin.com/in/wanessa-koserski-dos-santos/" target="_blank">
+                            <a href="https://www.linkedin.com/in/luan-piauilino-da-silva-20091b184" target="_blank">
                                 <LinkedIn style={{ fontSize: 50 }} />
                             </a>
-                            <a href="https://github.com/wanessakoserski" target="_blank">
+                            <a href="https://github.com/LuanPiauilino" target="_blank">
                                 <GitHub style={{ fontSize: 40 }} />
                             </a>
                         </Box>
@@ -82,10 +82,10 @@ function Sobre() {
                         </div>
                         <h3>Marcelo Nascimento</h3>
                         <Box className='socialPerfil'>
-                            <a href="https://www.linkedin.com/in/wanessa-koserski-dos-santos/" target="_blank">
+                            <a href="https://www.linkedin.com/in/marcelosantos616/" target="_blank">
                                 <LinkedIn style={{ fontSize: 50 }} />
                             </a>
-                            <a href="https://github.com/wanessakoserski" target="_blank">
+                            <a href="https://github.com/marcelooo616" target="_blank">
                                 <GitHub style={{ fontSize: 40 }} />
                             </a>
                         </Box>
@@ -96,10 +96,10 @@ function Sobre() {
                         </div>
                         <h3>Maria Vitoria Venturini</h3>
                         <Box className='socialPerfil'>
-                            <a href="https://www.linkedin.com/in/wanessa-koserski-dos-santos/" target="_blank">
+                            <a href="https://www.linkedin.com/in/maria-vitoria-soares-sotero-venturini-302980205/" target="_blank">
                                 <LinkedIn style={{ fontSize: 50 }} />
                             </a>
-                            <a href="https://github.com/wanessakoserski" target="_blank">
+                            <a href="https://github.com/MavisVenturini" target="_blank">
                                 <GitHub style={{ fontSize: 40 }} />
                             </a>
                         </Box>
@@ -110,10 +110,10 @@ function Sobre() {
                         </div>
                         <h3>Rian Ferreira</h3>
                         <Box className='socialPerfil'>
-                            <a href="https://www.linkedin.com/in/wanessa-koserski-dos-santos/" target="_blank">
+                            <a href="https://www.linkedin.com/in/orianferreira/" target="_blank">
                                 <LinkedIn style={{ fontSize: 50 }} />
                             </a>
-                            <a href="https://github.com/wanessakoserski" target="_blank">
+                            <a href="https://github.com/orianferreira" target="_blank">
                                 <GitHub style={{ fontSize: 40 }} />
                             </a>
                         </Box>
