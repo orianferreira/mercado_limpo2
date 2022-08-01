@@ -13,14 +13,14 @@ function Navbar() {
                             Mercado Limpo
                         </Typography>
                     </Box>
-                    <Link to='home' className="text-decorator-none">
+                    <Link to='/' className="text-decorator-none">
                             <Box mx={1} className='cursor'>
                                 <Typography variant="h6" color="inherit">
                                     home
                                 </Typography>
                             </Box>
                     </Link>
-                    <Link to='login' className="text-decorator-none">
+                    <Link to='/login' className="text-decorator-none">
                         <Box mx={1} className='cursor'>
                             <Typography variant="h6" color="inherit">
                                 login
@@ -28,7 +28,7 @@ function Navbar() {
                         </Box>
                     </Link>
 
-                    <Link to='sobrenos' className="text-decorator-none">
+                    <Link to='/sobre' className="text-decorator-none">
                         <Box mx={1} className='cursor'>
                             <Typography variant="h6" color="inherit">
                                 sobre nós
