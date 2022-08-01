@@ -4,8 +4,31 @@ import { Link } from 'react-router-dom';
 import './Login.css';
 
 function Login() {
-    return(
-        <></>
+    return (
+        <Grid container direction='row' justifyContent='center' alignItems='center'>
+            <Grid alignItems='center' xs={6}>
+                <Box paddingX={20}>
+                    <form>
+                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center'>Entrar</Typography>
+                        <TextField id='usuario' label='usuário' name='usuario' margin='normal' fullWidth />
+                        <TextField id='senha' label='senha' name='senha' margin='normal' type='password' fullWidth />
+                        <Box marginTop={2} textAlign='center'>
+                            <Link to='/home'>
+                                <Button type='submit' variant='contained' color='primary'>
+                                    Logar
+                                </Button>
+                            </Link>
+                        </Box>
+                    </form>
+                    <Box display='flex' justifyContent='center' marginTop={2}>
+                        <Box marginRight={1}>
+                            <Typography variant='subtitle1' gutterBottom align='center'>Não tem conta?</Typography>
+                        </Box>
+                        <Typography variant='subtitle1' gutterBottom align='center'>Cadastre-se</Typography>
+                    </Box>
+                </Box>
+            </Grid>
+        </Grid>
     );
 }
 
