@@ -14,7 +14,7 @@ function Login() {
                         <TextField id='senha' label='senha' name='senha' margin='normal' type='password' fullWidth className='imput'/>
                         <Box marginTop={2} textAlign='center'>
                             <Link to='/home' className='decoracao-link'>
-                                <Button type='submit' variant='contained' color='primary'>
+                                <Button type='submit' variant='contained' color='success'>
                                     Logar
                                 </Button>
                             </Link>
