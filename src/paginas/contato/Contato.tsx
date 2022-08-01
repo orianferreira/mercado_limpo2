@@ -33,7 +33,7 @@ function Contato() {
 
 
                 </Grid>
-                <Grid className="contato" xs={4} >
+                <Grid className="contato" xs={6} >
 
                     <h2>Endereço:</h2>
 
