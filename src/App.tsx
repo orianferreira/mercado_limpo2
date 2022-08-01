@@ -13,7 +13,7 @@ function App() {
   return(
     <Router>
       <Nav />
-        <div style={{  }}>
+        <div style={{ height: '100vh' }}>
           <Routes> 
             <Route path="/" element={ <Home /> } />
             <Route path="/login" element={ <Login /> } />
