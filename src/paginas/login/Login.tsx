@@ -9,11 +9,11 @@ function Login() {
             <Grid alignItems='center' xs={6}>
                 <Box paddingX={20}>
                     <form>
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center'>Entrar</Typography>
-                        <TextField id='usuario' label='usuário' name='usuario' margin='normal' fullWidth />
-                        <TextField id='senha' label='senha' name='senha' margin='normal' type='password' fullWidth />
+                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='texto-login'>Entrar</Typography>
+                        <TextField id='usuario' label='usuário' name='usuario' margin='normal' fullWidth className='imput'/>
+                        <TextField id='senha' label='senha' name='senha' margin='normal' type='password' fullWidth className='imput'/>
                         <Box marginTop={2} textAlign='center'>
-                            <Link to='/home'>
+                            <Link to='/home' className='decoracao-link'>
                                 <Button type='submit' variant='contained' color='primary'>
                                     Logar
                                 </Button>
@@ -22,12 +22,13 @@ function Login() {
                     </form>
                     <Box display='flex' justifyContent='center' marginTop={2}>
                         <Box marginRight={1}>
-                            <Typography variant='subtitle1' gutterBottom align='center'>Não tem conta?</Typography>
+                            <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
                         </Box>
-                        <Typography variant='subtitle1' gutterBottom align='center'>Cadastre-se</Typography>
+                        <Typography variant='subtitle1' gutterBottom align='center' className='texto-login'>Cadastre-se</Typography>
                     </Box>
                 </Box>
             </Grid>
+            <Grid xs={6} className='imagem'></Grid>
         </Grid>
     );
 }

@@ -1,0 +1,24 @@
+.imput:hover {
+    background-color: gary;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.300);
+}
+
+.texto-login {
+    font-weight: bold !important;
+}
+
+.decoracao-link {
+    text-decoration: none;
+}
+
+.imagem {
+    background-image: url(assets/Country\ side-bro.svg);
+    background-color: #92E3A9;
+    border-left: 1px solid black;
+    background-repeat: no-repeat;
+    width: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
