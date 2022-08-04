@@ -1,16 +1,70 @@
-import React from 'react';
+import React,  { ChangeEvent, useState, useEffect } from 'react';
 import { Grid, Box, Typography, TextField, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import useLocalStorage from 'react-use-localstorage';
+
+import UsuarioLogin from '../../models/UsuarioLogin';
 import './Login.css';
 
+
+
 function Login() {
+    
+    let navigate = useNavigate();
+    const [token, setToken] = useLocalStorage('token');
+
+    const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>(
+        {
+            id: 0,
+            usuario: "",
+            senha: "",
+            token: ""
+
+        }
+    )
+
+    function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+        setUsuarioLogin({
+            ...usuarioLogin,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    useEffect(()=>{
+        if(token != ""){
+            navigate('/home')
+        }
+    },[token])
+
+    
+    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+        e.preventDefault();
+
+        try {
+             await login(`/usuario/login`, usuarioLogin,setToken)
+            
+
+            alert("Usuario logado com sucesso!")
+        } catch (error) {
+            alert("Dados do usuario inconsistentes. Erro ao logar!")
+            
+        }
+
+    }
+
+    
+
+
+
+
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center'>
             <Grid alignItems='center' xs={6}>
                 <Box paddingX={20}>
                     <form>
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='texto-login'>Entrar</Typography>
-                        <TextField id='usuario' label='usuário' name='usuario' margin='normal' fullWidth className='imput'/>
+                        <TextField  value={usuarioLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}  id='usuario' label='usuário' name='usuario' margin='normal' fullWidth className='imput'/>
                         <TextField id='senha' label='senha' name='senha' margin='normal' type='password' fullWidth className='imput'/>
                         <Box marginTop={2} textAlign='center'>
                             <Link to='/home' className='decoracao-link'>
@@ -34,3 +88,7 @@ function Login() {
 }
 
 export default Login;
+
+function setUsuarioLogin(arg0: any) {
+    throw new Error('Function not implemented.');
+}
