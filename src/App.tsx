@@ -15,7 +15,8 @@ function App() {
       <Nav />
         <div style={{ height: '100vh' }}>
           <Routes> 
-            <Route path="/" element={ <Home /> } />
+            <Route path="/" element={ <Login /> } />
+            <Route path="/home" element={ <Home /> } />
             <Route path="/login" element={ <Login /> } />
             <Route path="/contato" element={ <Contato /> } />
             <Route path="/sobre" element={ <Sobre /> } />

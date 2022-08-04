@@ -3,7 +3,7 @@ import { Grid, Box, Typography, TextField, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
-
+import { login } from '../../service/Service';
 import UsuarioLogin from '../../models/UsuarioLogin';
 import './Login.css';
 
@@ -16,9 +16,9 @@ function Login() {
 
     const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>(
         {
-            id: 0,
-            usuario: "",
-            senha: "",
+            nome: "",
+            email: "",
+            senha:"",
             token: ""
 
         }
@@ -32,7 +32,7 @@ function Login() {
     }
 
     useEffect(()=>{
-        if(token != ""){
+        if(token != ''){
             navigate('/home')
         }
     },[token])
@@ -62,16 +62,16 @@ function Login() {
         <Grid container direction='row' justifyContent='center' alignItems='center'>
             <Grid alignItems='center' xs={6}>
                 <Box paddingX={20}>
-                    <form>
+                    <form onSubmit={onSubmit} >
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='texto-login'>Entrar</Typography>
-                        <TextField  value={usuarioLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}  id='usuario' label='usuário' name='usuario' margin='normal' fullWidth className='imput'/>
-                        <TextField id='senha' label='senha' name='senha' margin='normal' type='password' fullWidth className='imput'/>
+                              <TextField  value={usuarioLogin.email} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}  id='email' label='email' name='email' margin='normal' fullWidth className='imput'/>
+                             <TextField value={usuarioLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' name='senha' margin='normal' type='password' fullWidth className='imput'/>
                         <Box marginTop={2} textAlign='center'>
-                            <Link to='/home' className='decoracao-link'>
+                           
                                 <Button type='submit' variant='contained' color='success'>
                                     Logar
                                 </Button>
-                            </Link>
+                            
                         </Box>
                     </form>
                     <Box display='flex' justifyContent='center' marginTop={2}>
