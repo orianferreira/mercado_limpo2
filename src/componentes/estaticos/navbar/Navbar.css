@@ -1,12 +1,32 @@
-.cursor {
-    cursor: pointer;
-    color: white;
+.nav-main {
+    background-color: var(--cor-de-fundo) !important;
+    box-shadow: 0px 1.2px #47474757;
+    display: flex;
+    justify-content: space-between;
+    min-height: 60px !important;
+    width: 100%;
 }
 
-.text-decorator-none {
+.nav-link {
+    display: flex;
+}
+
+.nav-link .link {
+    color: white;
+    padding: 10px;
     text-decoration: none;
 }
 
-.borda-baixo {
-    border-bottom: 1px solid black;
+.nav-link .link .pages {
+    padding: 0px 4px;
+    border-bottom: 2px solid var(--cor-de-fundo);
+    transition: all 0.3s;
+}
+
+.nav-link .link .pages:hover {   
+    border-bottom: 2px solid white;
+}
+
+.cursor {
+    cursor: pointer;
 }

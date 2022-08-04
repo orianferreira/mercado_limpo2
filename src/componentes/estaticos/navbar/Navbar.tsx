@@ -1,48 +1,52 @@
+import React from "react";
 import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import { Link } from 'react-router-dom';
-import React from "react";
 import './Navbar.css'
 
 function Navbar() {
     return (
         <>
-            <AppBar position="static" className='borda-baixo'>
-                <Toolbar variant="dense" style={{ backgroundColor: "green" }}>
-                    <Box className='cursor'>
-                        <Typography variant="h5" color="inherit">
-                            Mercado Limpo
+            <AppBar position="static">
+                <Toolbar variant="dense" className='nav-main'>
+                    <Box className="cursor">
+                        <Typography variant="h4" color="inherit">
+                            mercado limpo
                         </Typography>
                     </Box>
-                    <Link to='/home' className="text-decorator-none">
-                            <Box mx={1} className='cursor'>
+
+                    <Box className="nav-link">
+                        <Link to='/home' className="link">
+                            <Box mx={1} className="pages">
                                 <Typography variant="h6" color="inherit">
                                     home
                                 </Typography>
                             </Box>
-                    </Link>
-                    <Link to='/' className="text-decorator-none">
-                        <Box mx={1} className='cursor'>
-                            <Typography variant="h6" color="inherit">
-                                login
-                            </Typography>
-                        </Box>
-                    </Link>
+                        </Link>
 
-                    <Link to='/sobre' className="text-decorator-none">
-                        <Box mx={1} className='cursor'>
-                            <Typography variant="h6" color="inherit">
-                                sobre nós
-                            </Typography>
-                        </Box>
-                    </Link>
+                        <Link to='/sobre' className="link">
+                            <Box mx={1} className="pages">
+                                <Typography variant="h6" color="inherit">
+                                    sobre nós
+                                </Typography>
+                            </Box>
+                        </Link>
 
-                    <Link to='/contato' className="text-decorator-none">
-                        <Box mx={1} className='cursor'>
-                            <Typography variant="h6" color="inherit">
-                                contato
-                            </Typography>
-                        </Box>
-                    </Link>
+                        <Link to='/contato' className="link">
+                            <Box mx={1} className="pages">
+                                <Typography variant="h6" color="inherit">
+                                    contato
+                                </Typography>
+                            </Box>
+                        </Link>
+
+                        <Link to='/' className="link">
+                            <Box mx={1} className="pages">
+                                <Typography variant="h6" color="inherit">
+                                    logout
+                                </Typography>
+                            </Box>
+                        </Link>
+                    </Box>            
             </Toolbar>
         </AppBar>
         </>
