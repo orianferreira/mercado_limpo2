@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <Nav />
-        <div style={{ height: '100vh', width: '100%'}}>
+        <div style={{ height: '100vh'}}>
           <Routes> 
             <Route path="/" element={ <Login /> } />
             <Route path="/home" element={ <Home /> } />

@@ -1,5 +1,10 @@
-.borda-cima {
-    border-top: 1px solid black;
-    background-color: green;
+.footer {
+    background-color: var(--cor-de-fundo);
+    border-top: 1px solid var(--contraste-1);
+    color: white;
 }
 
+.footer .textos {
+    font-weight: bold;
+    font-size: 15px;
+}
