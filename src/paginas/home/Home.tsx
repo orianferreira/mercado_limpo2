@@ -7,17 +7,17 @@ function Home() {
     return (
         <>
             <Grid
-          container
-          direction="row"
-          alignItems="center"
-          className='home-main'
-        >
+            container
+            direction="row"
+            alignItems="center"
+            className='caixa'
+            >
           <Grid alignItems="center" item xs={6}>
             <Box paddingX={20}>
               <Typography
                 variant="h3"
                 align='center'
-                className="title"
+                className="titulo"
               >
                 Seja bem vindo(a)!
               </Typography>
@@ -27,14 +27,14 @@ function Home() {
                 color="textPrimary"
                 component="h5"
                 align="center"
-                className='message'
+                className='mensagem'
               >
                Somos o Mercado Limpo e estamos aqui para oferecer equipamentos para energia limpa!
               </Typography>
             </Box>
-            <Box className='button-main'>
+            <Box className='botao-main'>
               <Box marginRight={1}></Box>
-              <Button variant="outlined" className='button'>
+              <Button variant="contained" className='botao'>
                 <a>
                   Feed
                 </a>

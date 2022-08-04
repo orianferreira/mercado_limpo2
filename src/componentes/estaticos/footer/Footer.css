@@ -1,10 +1,15 @@
 .footer {
     background-color: var(--cor-de-fundo);
     border-top: 1px solid var(--contraste-1);
-    color: white;
+    color: var(--white);
 }
 
 .footer .textos {
     font-weight: bold;
     font-size: 15px;
+}
+
+.icon-media {
+    font-size: 25;
+    color: var(--white);
 }

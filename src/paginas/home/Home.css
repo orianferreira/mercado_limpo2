@@ -1,20 +1,31 @@
 .caixa{
-    background-Color: #3F51B5;
+    background-Color: var(--cor-de-fundo-leve);
     width: 100vw;
-    height: 100%;
+    height: calc(100vh - 160px);
+
+    display: flex;
+    justify-content: space-between;
 }
 
-.titulo{
-    color: white !important;
-    font-weight: bold !important;
+.titulo {
+    color: var(--texto-principais) !important;
+    font-weight: 600 !important;
 }
 
-.botao{
-    border-color: white !important;
-    background-color: #3F51B5;
-    color: white !important;
+.mensagem {
+    color: black;
+    font-weight: 200 !important;
+    font-size: 20px !important;
 }
+
+.botao-main {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+
 
 .postagens{
-    background-color: white;
+    background-color: var(--white);
 }
