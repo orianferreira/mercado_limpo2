@@ -9,7 +9,7 @@
 .formContato {
     /*Alinhamento*/
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap ;
     align-items: flex-start;
     justify-content: center;
     /*Tamanho*/
