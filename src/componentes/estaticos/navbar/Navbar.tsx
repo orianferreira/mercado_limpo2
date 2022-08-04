@@ -8,7 +8,8 @@ function Navbar() {
         <>
             <AppBar position="static">
                 <Toolbar variant="dense" className='nav-main'>
-                    <Box className="cursor">
+                    <Box className="nome-marca">
+                        <img src="https://i.imgur.com/LSGPpin.png" height="56px"/>
                         <Typography variant="h4" color="inherit">
                             mercado limpo
                         </Typography>

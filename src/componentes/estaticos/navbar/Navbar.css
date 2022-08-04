@@ -27,6 +27,8 @@
     border-bottom: 2px solid var(--white);
 }
 
-.cursor {
+.nome-marca {
     cursor: pointer;
+    display: flex !important;
+    align-items: center;
 }
