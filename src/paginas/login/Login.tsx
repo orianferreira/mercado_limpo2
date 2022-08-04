@@ -11,7 +11,8 @@ import './Login.css';
 
 function Login() {
 
-    let navigate = useNavigate();
+    let navigate = useNavigate(); 
+    
     const [token, setToken] = useLocalStorage('token');
 
     const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>(
@@ -43,9 +44,8 @@ function Login() {
 
         try {
             await login(`/usuario/login`, usuarioLogin, setToken)
-
-
             alert("Usuario logado com sucesso!")
+            
         } catch (error) {
             alert("Dados do usuario inconsistentes. Erro ao logar!")
 
