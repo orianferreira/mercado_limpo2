@@ -46,13 +46,26 @@ function CadastroUsuario() {
         })
     }
 
-    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+    async function cadastrar(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
-        if (confirmarSenha == user.senha) {
-            cadastroUsuario(`/usuario/cadastrar`, user, setUserResult)
-            alert('Usuario cadastrado com sucesso')
+
+        if (confirmarSenha === user.senha && user.senha.length >= 8) {
+
+            try {
+                await cadastroUsuario(`/usuario/cadastrar`, user, setUserResult)
+                alert("Usuário cadastrado com sucesso")
+
+            } catch (error) {
+                console.log(`Error: ${error}`)
+
+                alert("Erro ao criar cadastro")
+            }
+
         } else {
-            alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
+            alert("Insira no miníno 8 caracteres na senha.")
+
+            setUser({ ...user, senha: "" })
+            setConfirmarSenha("")
         }
     }
 
@@ -61,7 +74,7 @@ function CadastroUsuario() {
             <Grid item xs={6} className='imagem2'></Grid>
             <Grid item xs={6}>
                 <Box paddingX={10}>
-                    <form onSubmit={onSubmit}>
+                    <form onSubmit={cadastrar}>
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='texto-cadastro'>Cadastrar</Typography>
                         <TextField value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='nome' name='nome' margin='normal' fullWidth />
                         <TextField value={user.email} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='email' label='email' variant='outlined' name='email' margin='normal' fullWidth />
