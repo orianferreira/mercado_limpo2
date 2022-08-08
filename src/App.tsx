@@ -10,13 +10,15 @@ import Sobre from './paginas/sobre/Sobre';
 import Contato from './paginas/contato/Contato';
 import './App.css';
 
+
+
 function App() {
   return (
     <Router>
       <Nav />
         <div>
           <Routes> 
-            <Route path="/" element={ <Login /> } />
+            <Route path="/" element={ <Home /> } />
             <Route path="/home" element={ <Home /> } />
             <Route path="/login" element={ <Login /> } />
             <Route path="/contato" element={ <Contato /> } />
@@ -25,7 +27,9 @@ function App() {
           </Routes>
         </div>
       <Footer />
+     
     </Router>
+    
   );
 }
 

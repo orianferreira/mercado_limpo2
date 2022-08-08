@@ -12,8 +12,10 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
+    
+    
     /*Tamanho*/
-    margin-top: 140px;
+    
     width: 100vw;
     padding-top: 100px;
     padding-bottom: 100px;

@@ -1,27 +1,39 @@
-.caixa{
-    background-Color: var(--cor-de-fundo-leve);
-    width: 100vw;
-    height: calc(100vh - 160px);
 
+
+.caixa{
+    
+    background-Color: var(--cor-de-fundo-leve);
+    
+    height: calc(100vh - 160px);
+    width: 100vw !important;
+   
+    
     display: flex;
     justify-content: space-between;
 }
 
+
+
+
+
 .titulo {
     color: var(--texto-principais) !important;
     font-weight: 600 !important;
+    width: 100vw;
 }
 
 .mensagem {
     color: black;
     font-weight: 200 !important;
     font-size: 20px !important;
+    width: 100vw;
 }
 
 .botao-main {
     display: flex;
     justify-content: center;
     margin: 50px;
+    
 }
 
 
@@ -29,3 +41,54 @@
 .postagens{
     background-color: var(--white);
 }
+ .imghome{
+    
+    width: 100vw !important;
+    
+    
+    
+}
+
+
+
+
+
+
+.button {
+    
+    background: linear-gradient(-45deg, #00c9d2, #39cbf7, #27c8b7, #c4f97f);
+    background-size: 800% 400%;
+    padding: 1em 2em;
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+    transition: all .5s ease-in-out;
+    animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+   }
+   
+   .button:hover {
+    animation: gradient 3s infinite;
+    transform: scale(1.05);
+   }
+   
+   .button:active {
+    animation: gradient 3s infinite;
+    transform: scale(0.8);
+   }
+   
+   @keyframes gradient {
+    0% {
+     background-position: 0% 50%;
+    }
+   
+    50% {
+     background-position: 100% 50%;
+    }
+   
+    100% {
+     background-position: 0% 50%;
+    }
+   }
