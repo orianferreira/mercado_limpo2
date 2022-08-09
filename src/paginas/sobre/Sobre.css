@@ -1,0 +1,26 @@
+.title {
+    text-align: center;
+}
+
+.session {
+    width: 100%;
+    padding: 2.5%;
+}
+
+.cardPerfil {
+    text-align: center;
+}
+
+
+.perfil img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;    
+}
+
+.socialPerfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #92E3A9;
+}
