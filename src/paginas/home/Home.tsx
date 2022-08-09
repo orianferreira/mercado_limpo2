@@ -12,7 +12,7 @@ function Home() {
         
       <Grid >
         <Box>
-        <img src="https://i.imgur.com/KCoakLb.png" alt="" className='imghome' />
+        <img src="https://i.imgur.com/xJ5vuZ8.jpg" alt="" className='imghome' />
         </Box>
       </Grid>
 
