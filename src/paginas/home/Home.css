@@ -1,15 +1,12 @@
 
 
-.caixa{
-    
+.caixa{ 
     background-Color: var(--cor-de-fundo-leve);
-    
     height: calc(100vh - 160px);
-    width: 100vw !important;
-   
-    
+    width: 100% !important;
     display: flex;
     justify-content: space-between;
+    overflow-x: hidden;
 }
 
 
@@ -42,11 +39,7 @@
     background-color: var(--white);
 }
  .imghome{
-    
-    width: 100vw !important;
-    
-    
-    
+    width: calc(100vw) !important;  
 }
 
 
