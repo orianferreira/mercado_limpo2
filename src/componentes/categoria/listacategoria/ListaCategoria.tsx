@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box, Button, Card, CardActions, CardContent, Typography } from '@material-ui/core'
+import { Box, Button, Card, CardActions, CardContent, Typography } from '@mui/material'
 import { useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { TokenState } from '../../../store/token/tokenReducer';
@@ -33,11 +33,11 @@ function ListaCategoria() {
 
     async function getCategoria() {
         await buscar('/categoria', setCategoria, {
-          headers: {
-            'Authorization': token
-          }
+            headers: {
+                'Authorization': token
+            }
         })
-      }
+    }
 
     async function findById(id: string) {
         buscarId("/categoria/${id}", setCategoria, {
@@ -71,7 +71,6 @@ function ListaCategoria() {
                                     {categoria.tipo}
                                 </Typography>
 
-
                             </CardContent>
 
                             <CardActions>
@@ -100,7 +99,7 @@ function ListaCategoria() {
                 ))
             }
         </>
-    )
+    );
 }
 
-export default ListaCategoria
+export default ListaCategoria;
