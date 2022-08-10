@@ -1,4 +1,4 @@
-import { Button, Container, TextField, Typography } from '@mui/material';
+import { Box, Button, Container, Grid, TextField, Typography } from '@mui/material';
 import { findByDisplayValue } from '@testing-library/react';
 import React, {useState, useEffect, ChangeEvent} from 'react'
 import { useSelector } from 'react-redux';
@@ -7,6 +7,7 @@ import useLocalStorage from 'react-use-localstorage';
 import Categoria from '../../../models/Categoria';
 import { buscarId, post, put } from '../../../service/Service';
 import { TokenState } from '../../../store/token/tokenReducer';
+import '../cadastrocategoria/CadastroCategoria.css';
 
 
 function CadastroCategoria(){
@@ -84,15 +85,37 @@ function CadastroCategoria(){
 
 
         return (
-            <Container maxWidth="sm" className="topo">
+            
+            <Grid xs={12}  className="form-categoria">
+             <Grid  xs={12} className="form-grid-categoria">
+                
                 <form onSubmit={onSubmit} >
-                    <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro categoria</Typography>
-                    <TextField value={categoria.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="nome" label="categoria" variant="outlined" name="nome" margin="normal" fullWidth />
+                    <Box className='form-text-categoria'>
+
+                    <Box className='text-cadastra-categoria'> 
+                        <h1 >Cadastrar Categoria</h1>
+                    </Box>
+                   
+                   <Box className='input-textfield-categoria'>
+                       <TextField  value={categoria.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="nome" label="categoria" variant="outlined" name="nome"  fullWidth />
+                   </Box>
+                     
+                   
+                   
+                    <Box className="button-categoria">
                     <Button type="submit" variant="contained" color="primary">
                         Finalizar
                     </Button>
+                    </Box>
+                   
+                    </Box>
+                    
                 </form>
-            </Container>
+               
+               
+            </Grid>
+            </Grid>
+            
         )
    
 }

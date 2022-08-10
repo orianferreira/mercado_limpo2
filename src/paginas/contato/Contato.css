@@ -38,7 +38,7 @@ textarea {
 
 .textfield-Nome {
     padding-top: 30px;
-    padding-bottom: ;
+    
 }
 
 .textfield-Email {
@@ -83,8 +83,8 @@ textarea {
 
 .containerForm{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    padding-left: 50px;
     
 
 }
