@@ -8,7 +8,7 @@ import Login from './paginas/login/Login';
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import Sobre from './paginas/sobre/Sobre';
 import Contato from './paginas/contato/Contato';
-import ListaProduto from './componentes/postagens/listaproduto/ListaProduto';
+import ListaProduto from './componentes/produtos/listaproduto/ListaProduto';
 import './App.css';
 
 
