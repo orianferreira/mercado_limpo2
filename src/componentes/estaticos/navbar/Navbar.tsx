@@ -45,12 +45,16 @@ function Navbar() {
                                                     </Typography>                                                
                                             </Link>
                                             
-                                            <Link to='/produtos' className="link">
-                                    
-                                           <Typography variant="h6" color="inherit" className="typography">
-                                                        produtos
-                                           </Typography>
-                                    
+                                            <Link to='/produtos' className="link">                              
+                                                <Typography variant="h6" color="inherit" className="typography">
+                                                    produtos
+                                                </Typography>
+                                           </Link>
+
+                                           <Link to='' className="link">                              
+                                                <Typography variant="h6" color="inherit" className="typography">
+                                                    categorias
+                                                </Typography>
                                            </Link>
 
                                             <Link to='/sobre' className="link">                                                
@@ -65,9 +69,15 @@ function Navbar() {
                                                     </Typography>                                                
                                             </Link>
 
-                                            <Link to='/formularioProduto' className="link">                                                
+                                            <Link to='/formularioCategoria' className="link">                                                
                                                     <Typography  color="inherit" className="typography">
                                                         nova categoria
+                                                    </Typography>                                                
+                                            </Link>
+
+                                            <Link to='/formularioProduto' className="link">                                                
+                                                    <Typography  color="inherit" className="typography">
+                                                        novo produto
                                                     </Typography>                                                
                                             </Link>
 
@@ -101,12 +111,16 @@ function Navbar() {
                                                     </Typography>                                                
                                             </Link>
 
-                                            <Link to='/produtos' className="link">
-                                    
+                                            <Link to='/produtos' className="link">     
                                                     <Typography variant="h6" color="inherit" className="typography">
                                                         produtos
                                                     </Typography>
-                                    
+                                           </Link>
+
+                                           <Link to='' className="link">                              
+                                                <Typography variant="h6" color="inherit" className="typography">
+                                                    categorias
+                                                </Typography>
                                            </Link>
 
                                             <Link to='/sobre' className="link">                                                

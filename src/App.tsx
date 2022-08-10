@@ -34,10 +34,11 @@ function App() {
                 <Route path="/sobre" element={ <Sobre /> } />
                 <Route path="/cadastrousuario" element={ <CadastroUsuario /> } />
                 <Route path="/formularioCategoria" element={ <CadastroCategoria />}/>
+                <Route path="/formularioCategoria/:id" element={ <CadastroProduto />}/>
                 <Route path="/formularioProduto" element={ <CadastroProduto />}/>
                 <Route path="/formularioProduto/:id" element={ <CadastroProduto />}/>
-                <Route path="/deletarCategoria" element={ <DeletarCategoria />}/>
-                <Route path="/deletarProduto" element={ <DeleteProduto />}/>
+                <Route path="/deletarCategoria/:id" element={ <DeletarCategoria />}/>
+                <Route path="/deletarProduto/:id" element={ <DeleteProduto />}/>
                 <Route path="/produtos" element={ <ListaProduto /> } />
               </Routes>
             </div>
