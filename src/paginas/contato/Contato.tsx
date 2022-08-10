@@ -15,7 +15,7 @@ function Contato() {
 
             
 
-                <Grid xs={6} className="containerForm">
+                <Grid xs={12} className="containerForm">
                     <form className="formulario" >
                         
                         <Box className="textfield-Nome">
