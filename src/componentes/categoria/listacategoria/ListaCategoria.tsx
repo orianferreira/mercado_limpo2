@@ -3,7 +3,7 @@ import { Box, Button, Card, CardActions, CardContent, Typography } from '@materi
 import { useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { TokenState } from '../../../store/token/tokenReducer';
-import { buscarId } from '../../../service/Service';
+import { buscarId, buscar } from '../../../service/Service';
 
 import Categoria from '../../../models/Categoria'
 
@@ -31,6 +31,14 @@ function ListaCategoria() {
         }
     }, [id])
 
+    async function getCategoria() {
+        await buscar('/categoria', setCategoria, {
+          headers: {
+            'Authorization': token
+          }
+        })
+      }
+
     async function findById(id: string) {
         buscarId("/categoria/${id}", setCategoria, {
             headers: {
@@ -38,6 +46,10 @@ function ListaCategoria() {
             }
         })
     }
+
+    useEffect(() => {
+        getCategoria()
+    }, [categoria.length])
 
     return (
         <>
@@ -55,12 +67,17 @@ function ListaCategoria() {
                                     {categoria.nome}
                                 </Typography>
 
+                                <Typography variant="h5" component="h2">
+                                    {categoria.tipo}
+                                </Typography>
+
+
                             </CardContent>
 
                             <CardActions>
                                 <Box display="flex" justifyContent="center" mb={1.5} >
 
-                                    <Link to={`/categoria/${categoria.id}`} className='text-decorator-none'>
+                                    <Link to={`/formularioCategoria/${categoria.id}`} className='text-decorator-none'>
                                         <Box mx={1}>
                                             <Button variant="contained" className="maginLeft" size='small' color="primary" >
                                                 Atualizar
@@ -68,7 +85,7 @@ function ListaCategoria() {
                                         </Box>
                                     </Link>
 
-                                    <Link to={`/deletarTema/${categoria.id}`} className="text-decorator-none">
+                                    <Link to={`/deletarCategoria/${categoria.id}`} className="text-decorator-none">
                                         <Box mx={1}>
                                             <Button variant="contained" size='small' color="secondary">
                                                 Deletar

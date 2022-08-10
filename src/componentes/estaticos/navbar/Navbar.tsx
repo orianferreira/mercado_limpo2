@@ -51,7 +51,7 @@ function Navbar() {
                                                 </Typography>
                                            </Link>
 
-                                           <Link to='' className="link">                              
+                                           <Link to='/categoria' className="link">                              
                                                 <Typography variant="h6" color="inherit" className="typography">
                                                     categorias
                                                 </Typography>
@@ -115,12 +115,6 @@ function Navbar() {
                                                     <Typography variant="h6" color="inherit" className="typography">
                                                         produtos
                                                     </Typography>
-                                           </Link>
-
-                                           <Link to='' className="link">                              
-                                                <Typography variant="h6" color="inherit" className="typography">
-                                                    categorias
-                                                </Typography>
                                            </Link>
 
                                             <Link to='/sobre' className="link">                                                

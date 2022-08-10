@@ -3,7 +3,6 @@ import { findByDisplayValue } from '@testing-library/react';
 import React, {useState, useEffect, ChangeEvent} from 'react'
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom'
-import useLocalStorage from 'react-use-localstorage';
 import Categoria from '../../../models/Categoria';
 import { buscarId, post, put } from '../../../service/Service';
 import { TokenState } from '../../../store/token/tokenReducer';
@@ -49,7 +48,7 @@ function CadastroCategoria(){
 
             setCategoria({
                 ...categoria,
-                [e.target.name]: e.target.value,
+                [e.target.name]: e.target.value
             })
     
         }
@@ -65,14 +64,14 @@ function CadastroCategoria(){
                         'Authorization': token
                     }
                 })
-                alert('categoria atualizado com sucesso');
+                alert('Categoria atualizado com sucesso');
             } else {
                 post(`/categoria`, categoria, setCategoria, {
                     headers: {
                         'Authorization': token
                     }
                 })
-                alert('Tema cadastrado com sucesso');
+                alert('Categoria cadastrado com sucesso');
             }
             back()
     
@@ -88,6 +87,7 @@ function CadastroCategoria(){
                 <form onSubmit={onSubmit} >
                     <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro categoria</Typography>
                     <TextField value={categoria.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="nome" label="categoria" variant="outlined" name="nome" margin="normal" fullWidth />
+                    <TextField value={categoria.tipo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="tipo" label="tipo" variant="outlined" name="tipo" margin="normal" fullWidth />
                     <Button type="submit" variant="contained" color="primary">
                         Finalizar
                     </Button>
