@@ -8,6 +8,7 @@ import Login from './paginas/login/Login';
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import Sobre from './paginas/sobre/Sobre';
 import Contato from './paginas/contato/Contato';
+import ListaProduto from './componentes/produtos/listaproduto/ListaProduto';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import './App.css';
@@ -17,6 +18,7 @@ import CadastroCategoria from './componentes/categoria/cadastrocategoria/Cadastr
 
 function App() {
   return (
+  
     <Provider store={store}>
       
       <Router>
@@ -30,13 +32,14 @@ function App() {
               <Route path="/sobre" element={ <Sobre /> } />
               <Route path="/cadastrousuario" element={ <CadastroUsuario /> } />
               <Route path="/formularioCategoria" element={ <CadastroCategoria/>}/>
+              <Route path="/produtos" element={ <ListaProduto /> } />
             </Routes>
           </div>
         <Footer />
       
       </Router>
 
-    </Provider>    
+    </Provider>
   );
 }
 

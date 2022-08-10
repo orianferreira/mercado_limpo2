@@ -44,6 +44,14 @@ function Navbar() {
                                                         home
                                                     </Typography>                                                
                                             </Link>
+                                            
+                                            <Link to='/produtos' className="link">
+                                    
+                                           <Typography variant="h6" color="inherit" className="typography">
+                                                        produtos
+                                           </Typography>
+                                    
+                                           </Link>
 
                                             <Link to='/sobre' className="link">                                                
                                                     <Typography  color="inherit" className="typography">
@@ -92,6 +100,14 @@ function Navbar() {
                                                         home
                                                     </Typography>                                                
                                             </Link>
+
+                                            <Link to='/produtos' className="link">
+                                    
+                                                    <Typography variant="h6" color="inherit" className="typography">
+                                                        produtos
+                                                    </Typography>
+                                    
+                                           </Link>
 
                                             <Link to='/sobre' className="link">                                                
                                                     <Typography  color="inherit" className="typography">
