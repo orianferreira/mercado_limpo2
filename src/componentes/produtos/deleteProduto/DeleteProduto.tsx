@@ -4,9 +4,9 @@ import './DeleteProduto.css';
 import Postagem from '../../../models/Categoria';
 import { buscarId, deleteId } from '../../../service/Service';
 import { useNavigate, useParams } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/token/tokenReducer';
+import Produto from '../../../models/Produto';
 
 function DeleteProduto() {
   let history = useNavigate();
@@ -61,7 +61,7 @@ return (
               Deseja deletar o Produto:
             </Typography>
             <Typography color="textSecondary" >
-            {produtos?.titulo}
+            {produtos?.nome}
             </Typography>
           </Box>
 

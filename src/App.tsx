@@ -9,11 +9,17 @@ import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import Sobre from './paginas/sobre/Sobre';
 import Contato from './paginas/contato/Contato';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ListaProduto from './componentes/produtos/listaproduto/ListaProduto';
 =======
 import { Provider } from 'react-redux';
 import store from './store/store';
 >>>>>>> 1b86d8c201b3197bfa148e9a47936111ccf6f8a7
+=======
+import ListaProduto from './componentes/produtos/listaproduto/ListaProduto';
+import { Provider } from 'react-redux';
+import store from './store/store';
+>>>>>>> 07192bcebc94c03aead7eeb44c8e5adeb9ca5c9f
 import './App.css';
 import CadastroCategoria from './componentes/categoria/cadastrocategoria/CadastroCategoria';
 
@@ -21,6 +27,7 @@ import CadastroCategoria from './componentes/categoria/cadastrocategoria/Cadastr
 
 function App() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <Router>
       <Nav />
@@ -40,6 +47,9 @@ function App() {
     </Router>
     
 =======
+=======
+  
+>>>>>>> 07192bcebc94c03aead7eeb44c8e5adeb9ca5c9f
     <Provider store={store}>
       
       <Router>
@@ -53,14 +63,19 @@ function App() {
               <Route path="/sobre" element={ <Sobre /> } />
               <Route path="/cadastrousuario" element={ <CadastroUsuario /> } />
               <Route path="/formularioCategoria" element={ <CadastroCategoria/>}/>
+              <Route path="/produtos" element={ <ListaProduto /> } />
             </Routes>
           </div>
         <Footer />
       
       </Router>
 
+<<<<<<< HEAD
     </Provider>    
 >>>>>>> 1b86d8c201b3197bfa148e9a47936111ccf6f8a7
+=======
+    </Provider>
+>>>>>>> 07192bcebc94c03aead7eeb44c8e5adeb9ca5c9f
   );
 }
 
