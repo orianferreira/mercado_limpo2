@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Box, Card, CardActions, CardContent, Button, Typography } from "@mui/material";
-import './ListaProduto.css'
 import Produto from "../../../models/Produto";
 import useLocalStorage from "react-use-localstorage";
 import { buscar } from "../../../service/Service";
+import './ListaProduto.css'
 
 function ListaProduto() {
 
-    const [posts, setPosts] = useState<Produto[]>([])
+    const [produtos, setProdutos] = useState<Produto[]>([])
 
     const [token, setToken] = useLocalStorage('token');
 
     let navigate = useNavigate();
 
     useEffect(() => {
-        if (token == "") {
+        if (token === "") {
             alert("Você precisa estar logado")
             navigate("/login")
         }
     }, [token])
 
-    async function getPost() {
-        await buscar("/produtos", setPosts, {
+    async function getProdutos() {
+        await buscar("/produto", setProdutos, {
             headers: {
                 'Authorization': token
             }
@@ -31,14 +31,14 @@ function ListaProduto() {
 
     useEffect(() => {
 
-        getPost()
+        getProdutos()
 
-    }, [posts.length])
+    }, [produtos.length])
 
     return (
         <>
             {
-                posts.map(post => (
+                produtos.map(produtos => (
                     <Box m={2} >
                         <Card variant="outlined">
                             <CardContent>
@@ -46,25 +46,34 @@ function ListaProduto() {
                                     Produtos
                                 </Typography>
                                 <Typography variant="h5" component="h2">
-                                    {post.nome}
+                                    {produtos.nome}
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                    {post.descricao}
+                                    {produtos.descricao}
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                    {post.categoria?.nome}
+                                    {produtos.preco}
+                                </Typography>
+                                <Typography variant="body2" component="p">
+                                    {produtos.estoque}
+                                </Typography>
+                                <Typography variant="body2" component="p">
+                                    {produtos.categoria?.nome}
+                                </Typography>
+                                <Typography variant="body2" component="p">
+                                    {produtos.categoria?.tipo}
                                 </Typography>
                             </CardContent>
                             <CardActions>
                                 <Box display="flex" justifyContent="center" mb={1.5}>
-                                    <Link to={`/formularioProduto/${post.id}`} className="text-decorator-none" >
+                                    <Link to={`/formularioProduto/${produtos.id}`} className="text-decorator-none" >
                                         <Box mx={1}>
                                             <Button variant="contained" className="marginLeft" size='small' color="primary" >
                                                 Atualizar
                                             </Button>
                                         </Box>
                                     </Link>
-                                    <Link to={`/deletarProduto/${post.id}`} className="text-decorator-none">
+                                    <Link to={`/deletarProduto/${produtos.id}`} className="text-decorator-none">
                                         <Box mx={1}>
                                             <Button variant="contained" size='small' color="secondary">
                                                 Deletar
