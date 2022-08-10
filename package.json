@@ -17,6 +17,7 @@
     "@types/node": "^16.11.47",
     "@types/react": "^17",
     "@types/react-dom": "^17",
+    "@types/redux": "^3.6.0",
     "axios": "^0.27.2",
     "react": "^17",
     "react-dom": "^17",
@@ -24,8 +25,12 @@
     "react-redux": "^8.0.2",
     "react-router-dom": "6",
     "react-scripts": "5.0.1",
+<<<<<<< HEAD
     "react-toastify": "8.0.3",
     "react-use-localstorage": "^3.5.3",
+=======
+    "react-use-localstorage": "3.5.3",
+>>>>>>> 8da068ad6094626cd99135082c151a7444581e02
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4",
     "yarn": "^1.22.19"

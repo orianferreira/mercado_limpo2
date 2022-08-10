@@ -2302,6 +2302,13 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
+"@types/redux@^3.6.0":
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/@types/redux/-/redux-3.6.0.tgz#f1ebe1e5411518072e4fdfca5c76e16e74c1399a"
+  integrity sha512-ic+60DXHW5seNyqFvfr7Sk5cnXs+HsF9tIeIaxjOuSP5kzgDXC+AzKTYmjAfuLx4Sccm/0vjwBQj3OOkUkwOqg==
+  dependencies:
+    redux "*"
+
 "@types/resolve@1.17.1":
   version "1.17.1"
   resolved "https://registry.npmjs.org/@types/resolve/-/resolve-1.17.1.tgz"
@@ -7858,7 +7865,7 @@ react-transition-group@^4.4.0, react-transition-group@^4.4.2:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react-use-localstorage@^3.5.3:
+react-use-localstorage@3.5.3:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/react-use-localstorage/-/react-use-localstorage-3.5.3.tgz#c4bcc097859a2d2879e969f0a57b16345905df82"
   integrity sha512-1oNvJmo72G4v5P9ytJZZTb6ywD3UzWBiainTtfbNlb+U08hc+SOD5HqgiLTKUF0MxGcIR9JSnZGmBttNLXaQYA==
@@ -7921,6 +7928,13 @@ redent@^3.0.0:
   dependencies:
     indent-string "^4.0.0"
     strip-indent "^3.0.0"
+
+redux@*:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/redux/-/redux-4.2.0.tgz#46f10d6e29b6666df758780437651eeb2b969f13"
+  integrity sha512-oSBmcKKIuIR4ME29/AeNUnl5L+hvBq7OaJWzaptTQJAntaPvxIJqfnjbaEiCzzaIz+XmVILfqAM3Ob0aXLPfjA==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
 
 regenerate-unicode-properties@^10.0.1:
   version "10.0.1"

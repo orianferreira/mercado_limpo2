@@ -10,23 +10,10 @@ function ListaProduto() {
 
     const [produtos, setProdutos] = useState<Produto[]>([])
 
-    const [token, setToken] = useLocalStorage('token');
-
     let navigate = useNavigate();
 
-    useEffect(() => {
-        if (token === "") {
-            alert("Você precisa estar logado")
-            navigate("/login")
-        }
-    }, [token])
-
     async function getProdutos() {
-        await buscar("/produto", setProdutos, {
-            headers: {
-                'Authorization': token
-            }
-        })
+        await buscar("/produto", setProdutos)
     }
 
     useEffect(() => {

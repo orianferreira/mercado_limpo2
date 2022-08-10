@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/TokensReduces';
+import { TokenState } from '../../../store/token/tokenReducer';
 import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText } from "@material-ui/core"
 import { buscar, buscarId, post, put } from '../../../service/Service';
 import Produto from '../../../models/Produto';
@@ -11,7 +11,6 @@ import Categoria from '../../../models/Categoria';
 function CadastroProduto() {
     let history = useNavigate();
     const { id } = useParams<{ id: string }>();
-    const [categoria, setCategoria] = useState<Categoria[]>([])
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
@@ -30,13 +29,13 @@ function CadastroProduto() {
             nome: '',
             tipo: ''
         })
-    const [produto, setProduto] = useState < Produto({
+    const [produto, setProduto] = useState<Produto>({
         id: 0,
         nome: '',
         descricao: '',
         preco: '',
         estoque: '',
-        categoria: Categoria | null
+        categoria: null
     })
     useEffect(() => {
         setProduto({
@@ -68,7 +67,7 @@ function CadastroProduto() {
         })
     }
 
-    function updatedPostagem(e: ChangeEvent<HTMLInputElement>) {
+    function updatedProduto(e: ChangeEvent<HTMLInputElement>) {
 
         setProduto({
             ...produto,
@@ -86,7 +85,7 @@ function CadastroProduto() {
                     'Authorization': token
                 }
             })
-            alert('Produto atualizada com sucesso!');
+            alert('Produto atualizado com sucesso!');
         } else {
             post(`/produto`, produto, setProduto, {
                 headers: {
@@ -107,11 +106,11 @@ function CadastroProduto() {
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro produto</Typography>
-                <TextField value={produto.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="titulo" label="titulo" variant="outlined" name="titulo" margin="normal" fullWidth />
-                <TextField value={produto.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="texto" label="texto" name="texto" variant="outlined" margin="normal" fullWidth />
+                <TextField value={produto.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
+                <TextField value={produto.categoria} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="categoria" label="categoria" name="categoria" variant="outlined" margin="normal" fullWidth />
 
                 <FormControl >
-                    <InputLabel id="demo-simple-select-helper-label"><Categoria></Categoria> </InputLabel>
+                    <InputLabel id="demo-simple-select-helper-label">Categoria</InputLabel>
                     <Select
                         labelId="demo-simple-select-helper-label"
                         id="demo-simple-select-helper"
@@ -122,7 +121,7 @@ function CadastroProduto() {
                         })}>
                         {
                             categoria.map(categoria => (
-                                <MenuItem value={categoria.id}>{categoria.descricao}</MenuItem>
+                                <MenuItem value={categoria.id}>{categoria.tipo}</MenuItem>
                             ))
                         }
                     </Select>
