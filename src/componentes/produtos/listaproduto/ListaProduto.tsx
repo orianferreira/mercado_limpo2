@@ -21,9 +21,7 @@ function ListaProduto() {
     }
 
     useEffect(() => {
-
         getProdutos()
-
     }, [produtos.length])
 
     return (

@@ -65,9 +65,9 @@ function Navbar() {
                                                     </Typography>                                                
                                             </Link>
 
-                                            <Link to='/formularioCategoria' className="link">                                                
+                                            <Link to='/formularioProduto' className="link">                                                
                                                     <Typography  color="inherit" className="typography">
-                                                        categoria
+                                                        nova categoria
                                                     </Typography>                                                
                                             </Link>
 

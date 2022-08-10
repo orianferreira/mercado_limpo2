@@ -10,9 +10,13 @@ import Sobre from './paginas/sobre/Sobre';
 import Contato from './paginas/contato/Contato';
 import ListaProduto from './componentes/produtos/listaproduto/ListaProduto';
 import CadastroCategoria from './componentes/categoria/cadastrocategoria/CadastroCategoria';
+import CadastroProduto from './componentes/produtos/cadastroproduto/CadastroProduto';
+import DeletarCategoria from './componentes/categoria/deletarcategoria/DeletarCategoria';
+import DeleteProduto from './componentes/produtos/deleteProduto/DeleteProduto';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import './App.css';
+
 
 function App() {
   return (
@@ -29,8 +33,12 @@ function App() {
                 <Route path="/contato" element={ <Contato /> } />
                 <Route path="/sobre" element={ <Sobre /> } />
                 <Route path="/cadastrousuario" element={ <CadastroUsuario /> } />
-                <Route path="/formularioCategoria" element={ <CadastroCategoria/>}/>
-                <Route path="/produto" element={ <ListaProduto /> } />
+                <Route path="/formularioCategoria" element={ <CadastroCategoria />}/>
+                <Route path="/formularioProduto" element={ <CadastroProduto />}/>
+                <Route path="/formularioProduto/:id" element={ <CadastroProduto />}/>
+                <Route path="/deletarCategoria" element={ <DeletarCategoria />}/>
+                <Route path="/deletarProduto" element={ <DeleteProduto />}/>
+                <Route path="/produtos" element={ <ListaProduto /> } />
               </Routes>
             </div>
           <Footer />
