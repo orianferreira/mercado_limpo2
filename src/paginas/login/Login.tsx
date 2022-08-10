@@ -89,6 +89,4 @@ function Login() {
 
 export default Login;
 
-function setUsuarioLogin(arg0: any) {
-    throw new Error('Function not implemented.');
-}
+

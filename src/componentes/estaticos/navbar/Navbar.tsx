@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { TokenState } from "../../../store/token/tokenReducer";
 import { addToken } from "../../../store/token/actions";
 
+
 function Navbar() {
 
     let history = useNavigate();
@@ -43,6 +44,14 @@ function Navbar() {
                                                         home
                                                     </Typography>                                                
                                             </Link>
+                                            
+                                            <Link to='/produtos' className="link">
+                                    
+                                           <Typography variant="h6" color="inherit" className="typography">
+                                                        produtos
+                                           </Typography>
+                                    
+                                           </Link>
 
                                             <Link to='/sobre' className="link">                                                
                                                     <Typography  color="inherit" className="typography">
@@ -53,6 +62,12 @@ function Navbar() {
                                             <Link to='/contato' className="link">                                                
                                                     <Typography  color="inherit" className="typography">
                                                         contato
+                                                    </Typography>                                                
+                                            </Link>
+
+                                            <Link to='/formularioCategoria' className="link">                                                
+                                                    <Typography  color="inherit" className="typography">
+                                                        categoria
                                                     </Typography>                                                
                                             </Link>
 
@@ -85,6 +100,14 @@ function Navbar() {
                                                         home
                                                     </Typography>                                                
                                             </Link>
+
+                                            <Link to='/produtos' className="link">
+                                    
+                                                    <Typography variant="h6" color="inherit" className="typography">
+                                                        produtos
+                                                    </Typography>
+                                    
+                                           </Link>
 
                                             <Link to='/sobre' className="link">                                                
                                                     <Typography  color="inherit" className="typography">
