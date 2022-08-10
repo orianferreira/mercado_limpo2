@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { TokenState } from "../../../store/token/tokenReducer";
 import { addToken } from "../../../store/token/actions";
 
+
 function Navbar() {
 
     let history = useNavigate();
@@ -53,6 +54,12 @@ function Navbar() {
                                             <Link to='/contato' className="link">                                                
                                                     <Typography  color="inherit" className="typography">
                                                         contato
+                                                    </Typography>                                                
+                                            </Link>
+
+                                            <Link to='/formularioCategoria' className="link">                                                
+                                                    <Typography  color="inherit" className="typography">
+                                                        categoria
                                                     </Typography>                                                
                                             </Link>
 

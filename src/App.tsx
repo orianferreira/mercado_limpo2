@@ -11,6 +11,7 @@ import Contato from './paginas/contato/Contato';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import './App.css';
+import CadastroCategoria from './componentes/categoria/cadastrocategoria/CadastroCategoria';
 
 
 
@@ -28,6 +29,7 @@ function App() {
               <Route path="/contato" element={ <Contato /> } />
               <Route path="/sobre" element={ <Sobre /> } />
               <Route path="/cadastrousuario" element={ <CadastroUsuario /> } />
+              <Route path="/formularioCategoria" element={ <CadastroCategoria/>}/>
             </Routes>
           </div>
         <Footer />
