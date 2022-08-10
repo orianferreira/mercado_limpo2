@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Box, Card, CardActions, CardContent, Button, Typography } from "@mui/material";
-import './ListaPostagem.css'
+import './ListaProduto.css'
 
-function ListaPostagem() {
+function ListaProduto() {
 
     return (
         <>
@@ -11,16 +11,16 @@ function ListaPostagem() {
                 <Card variant="outlined">
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>
-                            Postagens
+                            Produtos
                         </Typography>
                         <Typography variant="h5" component="h2">
                             Título
                         </Typography>
                         <Typography variant="body2" component="p">
-                            Texto da Postagem
+                            Texto do Produto
                         </Typography>
                         <Typography variant="body2" component="p">
-                            Tema
+                            Categoria
                         </Typography>
                     </CardContent>
                     <CardActions>
@@ -47,4 +47,4 @@ function ListaPostagem() {
     );
 }
 
-export default ListaPostagem;
+export default ListaProduto;
