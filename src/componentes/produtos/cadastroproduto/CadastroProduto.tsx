@@ -11,6 +11,7 @@ import Categoria from '../../../models/Categoria';
 function CadastroProduto() {
     let history = useNavigate();
     const { id } = useParams<{ id: string }>();
+    const [categorias, setCategorias] = useState<Categoria[]>([]);
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
@@ -29,14 +30,16 @@ function CadastroProduto() {
             nome: '',
             tipo: ''
         })
+
     const [produto, setProduto] = useState<Produto>({
         id: 0,
         nome: '',
         descricao: '',
-        preco: '',
-        estoque: '',
+        preco: 0,
+        estoque: 0,
         categoria: null
     })
+
     useEffect(() => {
         setProduto({
             ...produto,
@@ -52,7 +55,7 @@ function CadastroProduto() {
     }, [id])
 
     async function getCategoria() {
-        await buscar("/categoria", setCategoria, {
+        await buscar("/categoria", setCategorias, {
             headers: {
                 'Authorization': token
             }
@@ -68,7 +71,6 @@ function CadastroProduto() {
     }
 
     function updatedProduto(e: ChangeEvent<HTMLInputElement>) {
-
         setProduto({
             ...produto,
             [e.target.name]: e.target.value,
@@ -120,7 +122,7 @@ function CadastroProduto() {
                             }
                         })}>
                         {
-                            categoria.map(categoria => (
+                            categorias.map(categoria => (
                                 <MenuItem value={categoria.id}>{categoria.tipo}</MenuItem>
                             ))
                         }
