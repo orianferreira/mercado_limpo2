@@ -8,28 +8,33 @@ import Login from './paginas/login/Login';
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import Sobre from './paginas/sobre/Sobre';
 import Contato from './paginas/contato/Contato';
+import { Provider } from 'react-redux';
+import store from './store/store';
 import './App.css';
 
 
 
 function App() {
   return (
-    <Router>
-      <Nav />
-        <div>
-          <Routes> 
-            <Route path="/" element={ <Home /> } />
-            <Route path="/home" element={ <Home /> } />
-            <Route path="/login" element={ <Login /> } />
-            <Route path="/contato" element={ <Contato /> } />
-            <Route path="/sobre" element={ <Sobre /> } />
-            <Route path="/cadastrousuario" element={ <CadastroUsuario /> } />
-          </Routes>
-        </div>
-      <Footer />
-     
-    </Router>
-    
+    <Provider store={store}>
+      
+      <Router>
+        <Nav />
+          <div>
+            <Routes> 
+              <Route path="/" element={ <Home /> } />
+              <Route path="/home" element={ <Home /> } />
+              <Route path="/login" element={ <Login /> } />
+              <Route path="/contato" element={ <Contato /> } />
+              <Route path="/sobre" element={ <Sobre /> } />
+              <Route path="/cadastrousuario" element={ <CadastroUsuario /> } />
+            </Routes>
+          </div>
+        <Footer />
+      
+      </Router>
+
+    </Provider>    
   );
 }
 
