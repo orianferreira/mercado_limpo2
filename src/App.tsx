@@ -8,7 +8,7 @@ import Login from './paginas/login/Login';
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import Sobre from './paginas/sobre/Sobre';
 import Contato from './paginas/contato/Contato';
-import ListaPostagem from './componentes/postagens/listapostagem/ListaPostagem';
+import ListaProduto from './componentes/postagens/listaproduto/ListaProduto';
 import './App.css';
 
 
@@ -25,7 +25,7 @@ function App() {
             <Route path="/contato" element={ <Contato /> } />
             <Route path="/sobre" element={ <Sobre /> } />
             <Route path="/cadastrousuario" element={ <CadastroUsuario /> } />
-            <Route path="/posts" element={ <ListaPostagem /> } />
+            <Route path="/posts" element={ <ListaProduto /> } />
           </Routes>
         </div>
       <Footer />
