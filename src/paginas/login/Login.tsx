@@ -2,18 +2,18 @@ import React, { ChangeEvent, useState, useEffect } from 'react';
 import { Grid, Box, Typography, TextField, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
 import { login } from '../../service/Service';
 import UsuarioLogin from '../../models/UsuarioLogin';
 import './Login.css';
-
+import { useDispatch } from 'react-redux';
+import { addToken } from '../../store/token/actions';
 
 
 function Login() {
 
-    let navigate = useNavigate(); 
-    
-    const [token, setToken] = useLocalStorage('token');
+    let navigate = useNavigate();  
+    const dispatch = useDispatch();
+    const [token, setToken] = useState('');
 
     const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>(
         {
@@ -33,7 +33,8 @@ function Login() {
     }
 
     useEffect(() => {
-        if (token != '') {
+        if(token != '') {
+            dispatch(addToken(token))
             navigate('/home')
         }
     }, [token])
@@ -52,11 +53,6 @@ function Login() {
         }
 
     }
-
-
-
-
-
 
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center'>
@@ -93,6 +89,4 @@ function Login() {
 
 export default Login;
 
-function setUsuarioLogin(arg0: any) {
-    throw new Error('Function not implemented.');
-}
+

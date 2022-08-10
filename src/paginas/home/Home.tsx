@@ -5,16 +5,14 @@ import './Home.css';
 
 function Home() {
   return (
-    <>
-  
-      
+    <>   
       <Grid  container direction="row" alignItems="center" className='caixa' >
         
-      <Grid >
-        <Box>
-        <img src="https://i.imgur.com/xJ5vuZ8.jpg" alt="" className='imghome' />
-        </Box>
-      </Grid>
+        <Grid >
+          <Box>
+          <img src="https://i.imgur.com/xJ5vuZ8.jpg" alt="" className='imghome' />
+          </Box>
+        </Grid>
 
         <Grid alignItems="center" item xs={12} >
           <Box>
@@ -45,9 +43,6 @@ function Home() {
           
           
         </Grid>
-
-
-
       </Grid>
     </>
   );
