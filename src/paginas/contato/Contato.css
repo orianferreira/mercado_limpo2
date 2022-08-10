@@ -19,7 +19,7 @@
     justify-content: center; 
     /*Tamanho*/
     
-    width: 100vw;
+    width: 100%;
     padding-top: 100px;
     padding-bottom: 100px;
     /*cores*/
@@ -38,7 +38,6 @@ textarea {
 
 .textfield-Nome {
     padding-top: 30px;
-    padding-bottom: ;
 }
 
 .textfield-Email {
@@ -83,10 +82,8 @@ textarea {
 
 .containerForm{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
-
+    justify-content: start;
+    padding-left: 50px;
 }
 
 .containerContato {

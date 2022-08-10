@@ -13,7 +13,11 @@ function ListaProduto() {
     let navigate = useNavigate();
 
     async function getProdutos() {
-        await buscar("/produto", setProdutos)
+        await buscar("/produto", setProdutos, {
+            headers: {
+                
+            }
+        })
     }
 
     useEffect(() => {
