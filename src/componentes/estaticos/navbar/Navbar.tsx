@@ -44,6 +44,18 @@ function Navbar() {
                                                         home
                                                     </Typography>                                                
                                             </Link>
+                                            
+                                            <Link to='/produtos' className="link">                              
+                                                <Typography variant="h6" color="inherit" className="typography">
+                                                    produtos
+                                                </Typography>
+                                           </Link>
+
+                                           <Link to='/categoria' className="link">                              
+                                                <Typography variant="h6" color="inherit" className="typography">
+                                                    categorias
+                                                </Typography>
+                                           </Link>
 
                                             <Link to='/sobre' className="link">                                                
                                                     <Typography  color="inherit" className="typography">
@@ -59,7 +71,13 @@ function Navbar() {
 
                                             <Link to='/formularioCategoria' className="link">                                                
                                                     <Typography  color="inherit" className="typography">
-                                                        categoria
+                                                        nova categoria
+                                                    </Typography>                                                
+                                            </Link>
+
+                                            <Link to='/formularioProduto' className="link">                                                
+                                                    <Typography  color="inherit" className="typography">
+                                                        novo produto
                                                     </Typography>                                                
                                             </Link>
 
@@ -92,6 +110,12 @@ function Navbar() {
                                                         home
                                                     </Typography>                                                
                                             </Link>
+
+                                            <Link to='/produtos' className="link">     
+                                                    <Typography variant="h6" color="inherit" className="typography">
+                                                        produtos
+                                                    </Typography>
+                                           </Link>
 
                                             <Link to='/sobre' className="link">                                                
                                                     <Typography  color="inherit" className="typography">

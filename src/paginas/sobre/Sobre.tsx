@@ -13,6 +13,7 @@ function Sobre() {
                 direction='column'
                 justifyContent='flex-start'
                 alignItems='center'
+                className='sobre-body'
             >
                 <Grid item xs={12} className='session'>
                     <h2 className='title'>O que nós fazemos?</h2>

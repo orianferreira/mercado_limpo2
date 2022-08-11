@@ -1,9 +1,8 @@
 .footer {
-    width: 100vw !important;
+    width: 100%!important;
     background-color: var(--cor-de-fundo);
     border-top: 1px solid var(--contraste-1);
     color: var(--white);
-   
 }
 
 .footer .textos {
@@ -20,7 +19,7 @@
     
     
     display: block;
-    width: 100vw;
+    width: calc(100vw - 12px);
     height: 60px;
     max-height: 60px;
     margin: 0;

@@ -10,13 +10,13 @@
 .form-text-categoria{
     background-color: aliceblue;  
     border-radius: 30px;
-   
-   
+.form-categoria{
+    
 }
 
 .form-categoria{
-    
-    
+    display: flex;
+
     flex-wrap: wrap;
     background-image: url(https://i.imgur.com/njlvWFS.jpg);
     background-position: 55% 73%;
@@ -65,14 +65,15 @@
    padding-right: 50px;
    padding-top: 0px;
    padding-bottom: 10px;
-    display: flex;
-    justify-content: center;
+   display: flex;
+   justify-content: center;
 }
 
 .button-categoria{
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
+
 }
 
 .text-cadastra-categoria{

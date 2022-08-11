@@ -1,18 +1,18 @@
-import { Button, Container, TextField, Typography } from '@mui/material';
+import { Box, Button, Container, Grid, TextField, Typography } from '@mui/material';
 import { findByDisplayValue } from '@testing-library/react';
-import React, {useState, useEffect, ChangeEvent} from 'react'
+import React, { useState, useEffect, ChangeEvent } from 'react'
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom'
-import useLocalStorage from 'react-use-localstorage';
 import Categoria from '../../../models/Categoria';
 import { buscarId, post, put } from '../../../service/Service';
 import { TokenState } from '../../../store/token/tokenReducer';
+import '../cadastrocategoria/CadastroCategoria.css';
 
 
-function CadastroCategoria(){
+function CadastroCategoria() {
 
     let navigate = useNavigate();
-    const { id } = useParams<{id: string}>();
+    const { id } = useParams<{ id: string }>();
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
@@ -25,14 +25,14 @@ function CadastroCategoria(){
     })
 
     useEffect(() => {
-        if (token == ""){
+        if (token == "") {
             alert('Você precisa estar logado')
             navigate('/login')
         }
-    },[token])
+    }, [token])
 
-    useEffect(() =>{
-        if(id !== undefined){
+    useEffect(() => {
+        if (id !== undefined) {
             findById(id)
         }
     }, [id])
@@ -40,61 +40,82 @@ function CadastroCategoria(){
     async function findById(id: string) {
         buscarId(`/categoria/${id}`, setCategoria, {
             headers: {
-              'Authorization': token
+                'Authorization': token
             }
-          })
-        }
+        })
+    }
 
-        function updatedCategoria(e: ChangeEvent<HTMLInputElement>) {
+    function updatedCategoria(e: ChangeEvent<HTMLInputElement>) {
 
-            setCategoria({
-                ...categoria,
-                [e.target.name]: e.target.value,
+        setCategoria({
+            ...categoria,
+            [e.target.name]: e.target.value
+        })
+
+    }
+
+    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+        e.preventDefault()
+        console.log("categoria " + JSON.stringify(categoria))
+
+        if (id !== undefined) {
+            console.log(categoria)
+            put(`/categoria`, categoria, setCategoria, {
+                headers: {
+                    'Authorization': token
+                }
             })
-    
+            alert('Categoria atualizado com sucesso');
+        } else {
+            post(`/categoria`, categoria, setCategoria, {
+                headers: {
+                    'Authorization': token
+                }
+            })
+            alert('Categoria cadastrado com sucesso');
         }
+        back()
 
-        async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
-            e.preventDefault()
-            console.log("categoria " + JSON.stringify(categoria))
-    
-            if (id !== undefined) {
-                console.log(categoria)
-                put(`/categoria`, categoria, setCategoria, {
-                    headers: {
-                        'Authorization': token
-                    }
-                })
-                alert('categoria atualizado com sucesso');
-            } else {
-                post(`/categoria`, categoria, setCategoria, {
-                    headers: {
-                        'Authorization': token
-                    }
-                })
-                alert('Tema cadastrado com sucesso');
-            }
-            back()
-    
-        }
-    
-        function back() {
-            navigate('/categoria')
-        }
+    }
+
+    function back() {
+        navigate('/categoria')
+    }
 
 
-        return (
-            <Container maxWidth="sm" className="topo">
+    return (
+
+        <Grid xs={12} className="form-categoria">
+            <Grid xs={12} className="form-grid-categoria">
+
                 <form onSubmit={onSubmit} >
-                    <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro categoria</Typography>
-                    <TextField value={categoria.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="nome" label="categoria" variant="outlined" name="nome" margin="normal" fullWidth />
-                    <Button type="submit" variant="contained" color="primary">
-                        Finalizar
-                    </Button>
+
+                    <Box className='form-text-categoria'>
+
+                        <Box className='text-cadastra-categoria'>
+                            <h1 >Cadastrar Categoria</h1>
+                        </Box>
+
+                        <Box className='input-textfield-categoria'>
+                            <TextField value={categoria.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="nome" label="categoria" variant="outlined" name="nome" fullWidth />
+                        </Box>
+                        <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro categoria</Typography>
+                        <TextField value={categoria.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="nome" label="categoria" variant="outlined" name="nome" margin="normal" fullWidth />
+                        <TextField value={categoria.tipo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="tipo" label="tipo" variant="outlined" name="tipo" margin="normal" fullWidth />
+
+                        <Button type="submit" variant="contained" color="primary">
+                            Finalizar
+                        </Button>
+                    </Box>
+
                 </form>
-            </Container>
-        )
-   
+
+
+            </Grid>
+        </Grid>
+
+    );
+
 }
 
 export default CadastroCategoria;
