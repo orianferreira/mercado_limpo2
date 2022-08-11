@@ -15,7 +15,7 @@ function ListaProduto() {
     async function getProdutos() {
         await buscar("/produto", setProdutos, {
             headers: {
-                
+
             }
         })
     }
@@ -26,6 +26,17 @@ function ListaProduto() {
 
     return (
         <>
+
+            <Box className="box-button-cadastra">
+                <Link to={`/formularioProduto`} className="text-decorator-none">
+
+                    <button className="icon-btn add-btn">
+                        <div className="add-icon"></div>
+                        <div className="btn-txt">Add</div>
+                    </button>
+
+                </Link>
+            </Box>
             {
                 produtos.map(produtos => (
                     <Box m={2} >

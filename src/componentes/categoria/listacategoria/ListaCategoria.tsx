@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { TokenState } from '../../../store/token/tokenReducer';
 import { buscarId, buscar } from '../../../service/Service';
-
+import '../listacategoria/ListaCategoria.css';
 import Categoria from '../../../models/Categoria'
 
 function ListaCategoria() {
@@ -53,8 +53,20 @@ function ListaCategoria() {
 
     return (
         <>
+            <Box className="box-button-cadastra">
+                <Link to={`/formularioCategoria`} className="text-decorator-none">
+
+                    <button className="icon-btn add-btn">
+                        <div className="add-icon"></div>
+                        <div className="btn-txt">Add</div>
+                    </button>
+
+                </Link>
+            </Box>
+
             {
                 categoria.map(categoria => (
+
                     <Box m={2} >
                         <Card variant="outlined">
                             <CardContent>
