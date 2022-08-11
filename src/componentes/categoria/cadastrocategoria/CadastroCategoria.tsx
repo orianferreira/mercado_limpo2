@@ -85,35 +85,35 @@ function CadastroCategoria() {
 
     return (
 
-        <Grid xs={12} className="form-categoria">
-            <Grid xs={12} className="form-grid-categoria">
-
-                <form onSubmit={onSubmit} >
-
-                    <Box className='form-text-categoria'>
-
-                        <Box className='text-cadastra-categoria'>
-                            <h1 >Cadastrar Categoria</h1>
-                        </Box>
-
-                        <Box className='input-textfield-categoria'>
-                            <TextField value={categoria.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="nome" label="categoria" variant="outlined" name="nome" fullWidth />
-                        </Box>
-                        <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro categoria</Typography>
-                        <TextField value={categoria.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="nome" label="categoria" variant="outlined" name="nome" margin="normal" fullWidth />
-                        <TextField value={categoria.tipo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="tipo" label="tipo" variant="outlined" name="tipo" margin="normal" fullWidth />
-
-                        <Button type="submit" variant="contained" color="primary">
-                            Finalizar
-                        </Button>
+        <Grid xs={12}  className="form-categoria">
+        <Grid  xs={8} className="form-grid-categoria">
+            
+            <form onSubmit={onSubmit} >
+                <Box className='form-text-categoria'>
+                    <Box className='text-cadastra-categoria'> 
+                        <h1 >Cadastrar Categoria</h1>
+                    </Box>                  
+                    <Box className='input-textfield-categoria'>
+                        <TextField  value={categoria.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="nome" label="categoria" variant="outlined" name="nome"  fullWidth />
                     </Box>
-
-                </form>
-
-
-            </Grid>
+                    <Box className="">
+                        <Box className='input-textfield-categoria'>
+                             <TextField value={categoria.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="nome" label="categoria" variant="outlined" name="nome" margin="normal" fullWidth />    
+                        </Box>                            
+                        <Box className='input-textfield-categoria'>
+                            <TextField value={categoria.tipo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="tipo" label="tipo" variant="outlined" name="tipo" margin="normal" fullWidth />
+                        </Box>
+                        <Box className="button-categoria">
+                            <Button type="submit" variant="contained" color="primary">
+                                Finalizar
+                            </Button>
+                        </Box>
+                           
+                    </Box>                  
+                </Box>                 
+            </form>         
         </Grid>
-
+    </Grid>
     );
 
 }
