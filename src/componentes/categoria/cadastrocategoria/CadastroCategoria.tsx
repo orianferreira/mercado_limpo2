@@ -97,9 +97,7 @@ function CadastroCategoria() {
                         <TextField  value={categoria.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="nome" label="categoria" variant="outlined" name="nome"  fullWidth />
                     </Box>
                     <Box className="">
-                        <Box className='input-textfield-categoria'>
-                             <TextField value={categoria.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="nome" label="categoria" variant="outlined" name="nome" margin="normal" fullWidth />    
-                        </Box>                            
+                                                  
                         <Box className='input-textfield-categoria'>
                             <TextField value={categoria.tipo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="tipo" label="tipo" variant="outlined" name="tipo" margin="normal" fullWidth />
                         </Box>
