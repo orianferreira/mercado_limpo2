@@ -34,11 +34,12 @@ function ComprarProduto() {
   
        
         
-          function nao() {
+          function cancelar() {
             history('/produtos')
           }
   return (
     <>
+    
       <Box m={2}>
         <Card variant="outlined" >
           <CardContent>
@@ -79,7 +80,7 @@ function ComprarProduto() {
             <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
               
               <Box>
-              <Button  onClick={nao} variant="contained" size='large' color="secondary">
+              <Button  onClick={cancelar} variant="contained" size='large' color="secondary">
                 cancelar
               </Button>
               </Box>
@@ -87,6 +88,7 @@ function ComprarProduto() {
           </CardActions>
         </Card>
       </Box>
+
     </>
   );
   }
