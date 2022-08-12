@@ -25,8 +25,11 @@ function Navbar() {
     var navComponent;
 
     if(token != '') {
+
+        
         navComponent = <AppBar position="static">
                             <Toolbar className='nav-main' >
+                            
                             
                                     <Grid xs={4}>
                                         <Box className="nome-marca">
@@ -66,18 +69,6 @@ function Navbar() {
                                             <Link to='/contato' className="link">                                                
                                                     <Typography  color="inherit" className="typography">
                                                         contato
-                                                    </Typography>                                                
-                                            </Link>
-
-                                            <Link to='/formularioCategoria' className="link">                                                
-                                                    <Typography  color="inherit" className="typography">
-                                                        nova categoria
-                                                    </Typography>                                                
-                                            </Link>
-
-                                            <Link to='/formularioProduto' className="link">                                                
-                                                    <Typography  color="inherit" className="typography">
-                                                        novo produto
                                                     </Typography>                                                
                                             </Link>
 
@@ -140,9 +131,11 @@ function Navbar() {
                         </AppBar>
     }
 
+    
     return (
         <>
             {navComponent}
+            
         </>
     );
 }

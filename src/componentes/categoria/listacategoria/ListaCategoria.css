@@ -1,3 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200&family=Montserrat:wght@300&display=swap');
 .text-decorator-none{
     text-decoration: none;
+    
 }
+
+.box-button-cadastra{
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+
+   
+}
+.button-box{
+    
+    background-color: rgb(214, 35, 250);
+    
+}
+
+/* estilização do botão*/
+.icon-btn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #cdcdcd;
+    --white: white;;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    transition: width 0.2s ease-in-out;
+    font-weight: 500;
+    font-family: inherit;
+  }
+  
+  .add-btn:hover {
+    width: 120px;
+  }
+  
+  .add-btn::before,
+  .add-btn::after {
+    transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 20px;
+    top: calc(49% - 2px);
+    background: seagreen;
+  }
+  
+  .add-btn::after {
+    right: 14px;
+    overflow: hidden;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  
+  .add-btn::before {
+    left: 14px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  
+  .icon-btn:focus {
+    outline: none;
+  }
+  
+  .btn-txt {
+    opacity: 0;
+    transition: opacity 0.2s;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .add-btn:hover::before,
+  .add-btn:hover::after {
+    width: 4px;
+    border-radius: 2px;
+  }
+  
+  .add-btn:hover .btn-txt {
+    opacity: 1;
+  }
+  
+  .add-icon::after,
+  .add-icon::before {
+    transition: all 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 4px;
+    top: calc(50% - 10px);
+    background: seagreen;
+    overflow: hidden;
+  }
+  
+  .add-icon::before {
+    left: 22px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  
+  .add-icon::after {
+    right: 22px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  
+  .add-btn:hover .add-icon::before {
+    left: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+  }
+  
+  .add-btn:hover .add-icon::after {
+    right: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+  }

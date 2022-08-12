@@ -5,17 +5,23 @@ import Produto from "../../../models/Produto";
 import useLocalStorage from "react-use-localstorage";
 import { buscar } from "../../../service/Service";
 import './ListaProduto.css'
+import { useDispatch, useSelector } from "react-redux";
+import { TokenState } from "../../../store/token/tokenReducer";
 
 function ListaProduto() {
 
     const [produtos, setProdutos] = useState<Produto[]>([])
-
+    const dispatch = useDispatch();
     let navigate = useNavigate();
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+      );
+    
 
     async function getProdutos() {
         await buscar("/produto", setProdutos, {
             headers: {
-                
+
             }
         })
     }
@@ -24,8 +30,28 @@ function ListaProduto() {
         getProdutos()
     }, [produtos.length])
 
+    var buttonComponent;
+    if (token != '') {
+
+        buttonComponent = <Box className="box-button-cadastra">
+            <Link to={`/formularioProduto`} className="text-decorator-none">
+
+                <button className="icon-btn add-btn">
+                    <div className="add-icon"></div>
+                    <div className="btn-txt">Add</div>
+                </button>
+
+            </Link>
+        </Box>
+    }else{
+
+    }
+
     return (
         <>
+
+            {buttonComponent}
+            
             {
                 produtos.map(produtos => (
                     <Box m={2} >

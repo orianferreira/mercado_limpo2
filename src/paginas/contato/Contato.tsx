@@ -6,20 +6,13 @@ import { Box, Button } from '@mui/material';
 function Contato() {
     return (
         <>
-           
-        
-      
-           
-
             <Grid className="formContato"  >
 
-            
-
-                <Grid xs={6} className="containerForm">
+                <Grid xs={12} className="containerForm">
                     <form className="formulario" >
-                        
+
                         <Box className="textfield-Nome">
-                        <h2 className='text' >Fale Conosco</h2>
+                            <h2 className='text' >Fale Conosco</h2>
                             <TextField id="nome" label="Nome" variant="outlined" fullWidth />
                         </Box>
                         <Box className="textfield-Email">
@@ -36,7 +29,6 @@ function Contato() {
                         </Box>
                     </form>
 
-
                 </Grid>
 
                 <Grid className="contato" xs={12}  >
@@ -50,15 +42,9 @@ function Contato() {
                     <p>Email: contatomercadolimpo@gmail.com </p>
                     <p>Telefone: (11) 2245-2654</p>
 
-
-
                 </Grid>
 
-
-
-
             </Grid>
-
         </>
     );
 }
