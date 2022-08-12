@@ -31,3 +31,8 @@
   ::-webkit-scrollbar-thumb:hover {
 	  background: var(--texto-detalhes); 
   }
+
+  .Toastify__toast-container {
+    width: 40% !important;
+    margin-top: 50px !important;
+}
