@@ -33,6 +33,13 @@
     
 }
 
+.span {
+    text-decoration: none !important;
+    color: var(--white);
+    font-weight: bold;
+    text-shadow: 1px 2px var(--cor-de-fundo-leve), -1px -1px var(--cor-de-fundo-leve);
+}
+
 
 
 .postagens{
@@ -49,7 +56,7 @@
 
 .button {
     
-    background: linear-gradient(-45deg, #00c9d2, #39cbf7, #27c8b7, #c4f97f);
+    background: linear-gradient(-45deg, var(--cor-de-fundo-leve), var(--verde-ok), var(--contrate-1), var(--texto-detales));
     background-size: 800% 400%;
     padding: 1em 2em;
     display: inline-block;
@@ -57,7 +64,6 @@
     border-radius: 10px;
     font-size: 17px;
     font-weight: 700;
-    color: white;
     transition: all .5s ease-in-out;
     animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
    }

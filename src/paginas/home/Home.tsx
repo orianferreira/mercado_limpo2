@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typography, Grid, Button } from '@material-ui/core';
 import { Box } from '@mui/material';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 function Home() {
@@ -34,11 +35,13 @@ function Home() {
               Energia limpa a um click!
             </Typography>
 
-            <Box className='botao-main'>
-            <Button variant="contained" className='button'>
-              <a>Produtos</a>
-            </Button>
-          </Box>
+            <Box className='botao-main'>              
+                <Button variant="contained" className='button'>
+                  <Link to="/produtos" className='span'>
+                    Produtos
+                  </Link>
+                </Button>
+            </Box>
           </Box>
           
           
