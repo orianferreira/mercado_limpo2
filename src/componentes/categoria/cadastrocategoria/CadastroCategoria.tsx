@@ -7,6 +7,7 @@ import Categoria from '../../../models/Categoria';
 import { buscarId, post, put } from '../../../service/Service';
 import { TokenState } from '../../../store/token/tokenReducer';
 import '../cadastrocategoria/CadastroCategoria.css';
+import {toast} from 'react-toastify';
 
 
 function CadastroCategoria() {
@@ -26,7 +27,16 @@ function CadastroCategoria() {
 
     useEffect(() => {
         if (token == "") {
-            alert('Você precisa estar logado')
+            toast.info('Você precisa estar logado', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+            });
             navigate('/login')
         }
     }, [token])
@@ -65,14 +75,32 @@ function CadastroCategoria() {
                     'Authorization': token
                 }
             })
-            alert('Categoria atualizado com sucesso');
+            toast.success('Categoria atualizada com sucesso', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+            });
         } else {
             post(`/categoria`, categoria, setCategoria, {
                 headers: {
                     'Authorization': token
                 }
             })
-            alert('Categoria cadastrado com sucesso');
+            toast.success('Categoria cadastrada com sucesso', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+            });
         }
         back()
 

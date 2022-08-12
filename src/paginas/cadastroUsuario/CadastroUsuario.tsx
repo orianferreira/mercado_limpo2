@@ -3,6 +3,7 @@ import Usuario from '../../models/Usuario';
 import { cadastroUsuario } from '../../service/Service';
 import { Grid, Typography, TextField, Box, Button } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
+import {toast} from 'react-toastify';
 import './CadastroUsuario.css';
 
 function CadastroUsuario() {
@@ -53,16 +54,42 @@ function CadastroUsuario() {
 
             try {
                 await cadastroUsuario(`/usuario/cadastrar`, user, setUserResult)
-                alert("Usuário cadastrado com sucesso")
+                toast.success('Usuário cadastrado com sucesso', {
+                    position: "top-center",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined
+                });
 
             } catch (error) {
                 console.log(`Error: ${error}`)
-
-                alert("Erro ao criar cadastro")
+                toast.error('Erro ao cadastrar usuário', {
+                    position: "top-center",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined
+                  });
             }
 
         } else {
-            alert("Insira no miníno 8 caracteres na senha.")
+            toast.info('Insira no mínimo 8 caracters na senha', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+            });
 
             setUser({ ...user, senha: "" })
             setConfirmarSenha("")

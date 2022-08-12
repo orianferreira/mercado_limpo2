@@ -17,6 +17,8 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 import './App.css';
 import ListaCategoria from './componentes/categoria/listacategoria/ListaCategoria';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 
 function App() {
@@ -24,7 +26,9 @@ function App() {
 
     <Provider store={store}>
 
-    <Router>
+      <ToastContainer />
+
+      <Router>
           <Nav />
             <div>
               <Routes> 
@@ -45,9 +49,7 @@ function App() {
               </Routes>
             </div>
           <Footer />
-        
         </Router>
-
 
     </Provider>
 

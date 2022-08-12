@@ -6,6 +6,7 @@ import { TokenState } from '../../../store/token/tokenReducer';
 import { buscarId, buscar } from '../../../service/Service';
 import '../listacategoria/ListaCategoria.css';
 import Categoria from '../../../models/Categoria'
+import {toast} from 'react-toastify';
 
 function ListaCategoria() {
 
@@ -20,7 +21,16 @@ function ListaCategoria() {
 
     useEffect(() => {
         if (token === "") {
-            alert("Você precisa estar logado")
+            toast.info('Você precisa estar logado', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+              });
             navigate("/login")
         }
     }, [token])
@@ -58,7 +68,7 @@ function ListaCategoria() {
 
                     <button className="icon-btn add-btn">
                         <div className="add-icon"></div>
-                        <div className="btn-txt">Add</div>
+                        <div className="btn-txt">Adicionar Categoria</div>
                     </button>
 
                 </Link>

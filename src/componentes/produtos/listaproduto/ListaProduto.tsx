@@ -38,7 +38,7 @@ function ListaProduto() {
 
                 <button className="icon-btn add-btn">
                     <div className="add-icon"></div>
-                    <div className="btn-txt">Add</div>
+                    <div className="btn-txt">Adicionar Produto</div>
                 </button>
 
             </Link>

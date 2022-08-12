@@ -6,6 +6,7 @@ import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem,
 import { buscar, buscarId, post, put } from '../../../service/Service';
 import Produto from '../../../models/Produto';
 import Categoria from '../../../models/Categoria';
+import {toast} from 'react-toastify';
 
 
 function CadastroProduto() {
@@ -19,7 +20,16 @@ function CadastroProduto() {
 
     useEffect(() => {
         if (token == '') {
-            alert("Você precisa estar logado")
+            toast.info('Você precisa estar logado', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+            });
             history("/login")
 
         }
@@ -89,14 +99,32 @@ function CadastroProduto() {
                     'Authorization': token
                 }
             })
-            alert('Produto atualizado com sucesso!');
+            toast.success('Produto atualizado com sucesso', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+            });
         } else {
             post(`/produto`, produto, setProduto, {
                 headers: {
                     'Authorization': token
                 }
             })
-            alert('Produto cadastrado com sucesso!');
+            toast.success('Produto cadastrado com sucesso', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+              });
         }
         back()
 

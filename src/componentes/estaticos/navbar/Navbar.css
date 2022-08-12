@@ -62,8 +62,10 @@
 }
 
 .MuiGrid-grid-xs-5, .MuiGrid-grid-xs-4 {
-    max-width: fit-content;
-    flex-basis: auto;
+    max-width: fit-content !important;
+    flex-basis: auto !important;
 }
 
-
+.MuiPaper-root {
+    color: var(--white);
+}

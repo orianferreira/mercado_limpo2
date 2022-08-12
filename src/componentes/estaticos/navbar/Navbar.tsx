@@ -6,6 +6,7 @@ import { Grid } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import { TokenState } from "../../../store/token/tokenReducer";
 import { addToken } from "../../../store/token/actions";
+import {toast} from 'react-toastify';
 
 
 function Navbar() {
@@ -18,7 +19,16 @@ function Navbar() {
 
     function goLogout() {
         dispatch(addToken(''));
-        alert('Usuário deslogado')
+        toast.info('Usuário deslogado', {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined
+        });
         history('/login')
     }
 
