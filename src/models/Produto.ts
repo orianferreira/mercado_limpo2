@@ -6,6 +6,7 @@ interface Produto {
     descricao: string;
     preco: number;
     estoque: number;
+    foto: string;
     categoria?: Categoria | null;
 }
 
