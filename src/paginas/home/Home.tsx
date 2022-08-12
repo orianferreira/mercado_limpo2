@@ -2,6 +2,7 @@ import React from 'react';
 import { Typography, Grid, Button } from '@material-ui/core';
 import { Box } from '@mui/material';
 import './Home.css';
+import TabProduto from '../../componentes/produtos/tabproduto/TabProduto';
 
 function Home() {
   return (
@@ -39,11 +40,16 @@ function Home() {
               <a>Produtos</a>
             </Button>
           </Box>
+          <Grid item xs={12} >
+                <TabProduto />
+            </Grid>
           </Box>
           
           
         </Grid>
       </Grid>
+
+      
     </>
   );
 }

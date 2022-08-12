@@ -4,15 +4,15 @@ import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from "@
 import Produto from "../../../models/Produto";
 import useLocalStorage from "react-use-localstorage";
 import { buscar } from "../../../service/Service";
-import './ListaProduto.css'
+
 import { useDispatch, useSelector } from "react-redux";
 import { TokenState } from "../../../store/token/tokenReducer";
 import { TabContext, TabPanel } from '@material-ui/lab';
-import TabProduto from "../tabproduto/TabProduto";
 
 
 
-function ListaProduto() {
+
+function ListaProdutoTab() {
 
     const [produtos, setProdutos] = useState<Produto[]>([])
     const dispatch = useDispatch();
@@ -169,7 +169,7 @@ function ListaProduto() {
     return (
         <>
 
-            {buttonComponent}
+            
             {produtoComponent}
 
             
@@ -180,4 +180,4 @@ function ListaProduto() {
     );
 }
 
-export default ListaProduto;
+export default ListaProdutoTab;
