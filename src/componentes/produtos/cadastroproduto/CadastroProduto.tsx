@@ -94,7 +94,7 @@ function CadastroProduto() {
         e.preventDefault()
 
         if (id !== undefined) {
-            put(`/produto`, produto, setProduto, {
+            await put(`/produto`, produto, setProduto, {
                 headers: {
                     'Authorization': token
                 }
@@ -110,7 +110,7 @@ function CadastroProduto() {
                 progress: undefined
             });
         } else {
-            post(`/produto`, produto, setProduto, {
+            await post(`/produto`, produto, setProduto, {
                 headers: {
                     'Authorization': token
                 }

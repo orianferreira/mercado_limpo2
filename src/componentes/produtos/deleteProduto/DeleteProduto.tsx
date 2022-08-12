@@ -36,40 +36,41 @@ function DeleteProduto() {
 
   useEffect(() =>{
       if(id !== undefined){
-          findById(id)
+        findById(id)
       }
   }, [id])
 
   async function findById(id: string) {
-      buscarId(`/produto/${id}`, setProdutos, {
-          headers: {
-            'Authorization': token
-          }
-        })
+    await buscarId(`/produto/${id}`, setProdutos, {
+      headers: {
+        'Authorization': token
       }
+    })
+  }
 
-      function sim() {
-        history('/produtos')
-          deleteId(`/produto/${id}`, {
-            headers: {
-              'Authorization': token
-            }
-          });
-          toast.success('Produto deletado com sucesso', {
-            position: "top-center",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: false,
-            theme: "colored",
-            progress: undefined
-          });
-        }
+  async function sim() {
+      await deleteId(`/produto/${id}`, {
+      headers: {
+        'Authorization': token
+      }
+    });
+    toast.success('Produto deletado com sucesso', {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined
+      });
+      history('/produtos')
+  }
       
-        function nao() {
-          history('/produtos')
-        }
+  function nao() {
+    history('/produtos')
+  }
+
 return (
   <>
     <Box m={2}>

@@ -96,14 +96,9 @@ function ListaProduto() {
                                 </Link>
                             </div>
                        
-                            
-                           
-                           
-
                         </div>
                        
-                    </div>
-                    
+                    </div>                   
                     
                 </Box>
                
@@ -141,14 +136,6 @@ function ListaProduto() {
                                     </Button>
                                 </Link>
                             </div>
-                           
-
-
-                            
-                       
-                            
-                           
-                           
 
                         </div>
                        
@@ -168,14 +155,8 @@ function ListaProduto() {
 
     return (
         <>
-
             {buttonComponent}
-            {produtoComponent}
-
-            
-            
-           
-           
+            {produtoComponent}          
         </>
     );
 }

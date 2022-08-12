@@ -49,9 +49,8 @@ function DeletarCategoria() {
         })
     }
 
-    function sim() {
-        navegate('/categoria')
-        deleteId(`/categoria/${id}`, {
+    async function sim() {
+        await deleteId(`/categoria/${id}`, {
           headers: {
             'Authorization': token
           }
@@ -66,6 +65,7 @@ function DeletarCategoria() {
           theme: "colored",
           progress: undefined
         });
+        navegate('/categoria')
       }
     
       function nao() {
