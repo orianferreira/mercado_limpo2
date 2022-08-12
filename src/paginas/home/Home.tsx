@@ -3,6 +3,7 @@ import { Typography, Grid, Button } from '@material-ui/core';
 import { Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 import './Home.css';
+import TabProduto from '../../componentes/produtos/tabproduto/TabProduto';
 
 function Home() {
   return (
@@ -42,11 +43,17 @@ function Home() {
                   </Link>
                 </Button>
             </Box>
+          
+            <Grid item xs={12} >
+                  <TabProduto />
+            </Grid>
           </Box>
           
           
         </Grid>
       </Grid>
+
+      
     </>
   );
 }
