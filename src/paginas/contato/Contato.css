@@ -23,7 +23,7 @@
     padding-top: 100px;
     padding-bottom: 100px;
     /*cores*/
-    background-color: rgba(174, 233, 0, 0.471);
+    background-color: var(--cor-de-fundo-leve);
     background-image: url(https://i.imgur.com/njlvWFS.jpg);
     background-position: 55% 73%;  
     font-family: 'Montserrat', sans-serif;
