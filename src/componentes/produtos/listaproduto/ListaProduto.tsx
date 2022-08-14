@@ -155,8 +155,10 @@ function ListaProduto() {
 
     return (
         <>
-            {buttonComponent}
-            {produtoComponent}          
+            <Box className="page-produtos">
+                {buttonComponent}
+                {produtoComponent}     
+            </Box>     
         </>
     );
 }

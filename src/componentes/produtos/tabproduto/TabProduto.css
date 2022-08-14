@@ -3,5 +3,5 @@
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    --cor-de-fundo: #93e6e2;
+    background-color: var(--cor-de-fundo-leve) !important;
 }
