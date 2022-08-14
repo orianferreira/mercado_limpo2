@@ -155,11 +155,8 @@ function ListaProduto() {
 
     return (
         <>
-         <Box className="page-produtos-button">    
-               {buttonComponent}    
-            </Box>
-       
-            <Box className="page-produtos">    
+            <Box className="page-produtos">
+                {buttonComponent}
                 {produtoComponent}     
             </Box>     
         </>

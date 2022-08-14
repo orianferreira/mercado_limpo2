@@ -1,12 +1,17 @@
-.container-prod {
+.container-prod{
     display: flex;
     justify-content: flex-end;
-    background-color: var(--cor-de-fundo-leve);
+    background-color: #2cb8b2;
     max-width: 100%;
     padding-top: 45px;
     padding-bottom: 45px;
+    
 }
-.img-prod img {
+
+.img-prod{
+     
+}
+.img-prod img{
     margin-top: 10%;
     margin-bottom: 10%;
     margin-left: 40px;
@@ -14,80 +19,128 @@
     align-items: center !important;
     justify-content: center !important;
     width: 80%;
+    
 }
-.descricao-prod {
+.descricao-prod{
     margin-top: 20px;
     margin-bottom: 20px;
     margin-right: 15px;
     border-radius: 30px;
-    background-color: var(--white);
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    -webkit-box-shadow: -6px 3px 10px 3px var(--box-detalhes-shadow);
-    -moz-box-shadow: -6px 3px 10px 3px var(--box-detalhes-shadow);
-    box-shadow: -6px 3px 10px 3px var(--box-detalhes-shadow);
+    -webkit-box-shadow: -6px 3px 10px 3px #06060680;
+-moz-box-shadow: -6px 3px 10px 3px #00000074;
+box-shadow: -6px 3px 10px 3px #00000054;
 }
-.desc {
+
+.nome-prod{
+    
+    
+}
+.desc{
     padding-top: 20px;
 }
 
-.categoria-prod {
+.categoria-prod{
+   
     font-weight: 100;
+    
+    
 }
-.tipo-prod {
+
+.tipo-prod{
+    
     font-weight: 100;
+    
+    
 }
-.estoque-prod {
+.estoque-prod{
+   
     font-weight: 100;
+    
 }
-.box-valor {
+
+.box-valor{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;  
     justify-content: space-around !important;
-    justify-content: left;
+    justify-content: left;  
+    
 }
-.valor {
+
+.valor{
     display: flex;
+    
+    
     font-weight: 100;
-    font-size: 30px;
+    font-size:30px;
+
 }
-.valor div {
+.valor div{
     padding-left: 10px;
-    font-weight: bold;
+    font-weight:  bold;
 }
-.button-voltar {
+
+.button-voltar{
+    
     display: flex;
-    justify-content: center;
+    justify-content:  center;   
     padding-top: 30px;
     padding-bottom: 8px;
+    
+    
 }
-.button-voltar-color {
-    background-color: var(--cor-de-fundo);
+
+.button-voltar-color{
+    background-color: #2cb8b2;
 }
 
 
 
-.float {
+.float{
+    
+    
+    
     animation-name: float;
-    animation-duration: 5s;
-    animation-timing-function: ease-in-out;
-    animation-delay: initial;
-    animation-iteration-count: infinite;
-    animation-direction: initial;
-    animation-fill-mode: initial;
-    animation-play-state: initial;
-}
-@keyframes float {
-    0% {
-        transform: translateY(0px);
+      animation-duration: 5s;
+      animation-timing-function: ease-in-out;
+      animation-delay: initial;
+      animation-iteration-count: infinite;
+      animation-direction: initial;
+      animation-fill-mode: initial;
+      animation-play-state: initial;
+  }
+
+@keyframes float{
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(-20px);}
+    100% {transform: translateY(0px);}
     }
 
-    50% {
-        transform: translateY(-20px);
-    }
 
-    100% {
-        transform: translateY(0px);
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
