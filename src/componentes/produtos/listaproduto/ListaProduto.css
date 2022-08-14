@@ -89,8 +89,6 @@
     margin-top: 20px; 
 }
 
-
-
 .box-card-produto{
     display: flex;
     flex-direction: row;
@@ -110,17 +108,7 @@
 
 .page-produtos {
     background-color: var(--cor-de-fundo-leve);
-    display: flex;   
+    display: flex;
     min-height: calc(100vh - 160px);
     flex-wrap: wrap;
-}
-
-.page-produtos-button{
-    background-color: var(--cor-de-fundo-leve);
-    padding-top: 10px;
-    padding-right: 25px;
-
-}
-.box-button-cadastra{
-    margin: 0 !important;
 }
