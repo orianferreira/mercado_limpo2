@@ -13,12 +13,16 @@
 }
 
 .imagem {
-    background-image: url(assets/Country\ side-bro.svg);
-    background-color: #92E3A9;
-    border-left: 1px solid black;
+    background-image: url(assets/Mobile\ login-amico.svg);
+    background-color: var(--texto-principais);
+    border-left: 5px dotted var(--cor-de-fundo);
     background-repeat: no-repeat;
-    width: 100vh;
-    min-height: 100vh;
+    width: 100vw;
+    min-height: calc(100vh - 160px);
     background-size: cover;
     background-position: center;
+}
+
+.page-login {
+    background-color: var(--cor-de-fundo-leve);
 }

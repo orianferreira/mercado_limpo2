@@ -2,7 +2,7 @@
 
 .caixa{ 
     background-Color: var(--cor-de-fundo-leve);
-    height: calc(100vh - 160px);
+    min-height: calc(100vh - 160px);
     width: 100% !important;
     display: flex;
     justify-content: space-between;

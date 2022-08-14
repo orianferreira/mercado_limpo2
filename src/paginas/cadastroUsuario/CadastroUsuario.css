@@ -1,10 +1,10 @@
 .imagem2 {
     background-image: url(assets/Sun\ energy-bro.svg);
-    background-color: #92E3A9;
-    border-right: 1px solid black;
+    background-color: var(--texto-principais);
+    border-right: 5px dotted var(--cor-de-fundo);
     background-repeat: no-repeat;
-    width: 100vh;
-    min-height: 100vh;
+    width: 100vw;
+    min-height: calc(100vh - 160px);
     background-size: cover;
     background-position: center;
 }
