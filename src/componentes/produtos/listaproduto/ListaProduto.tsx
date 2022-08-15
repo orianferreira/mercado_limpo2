@@ -10,6 +10,13 @@ import { TokenState } from "../../../store/token/tokenReducer";
 import { TabContext, TabPanel } from '@material-ui/lab';
 import TabProduto from "../tabproduto/TabProduto";
 
+export interface Produtos {
+    id: number
+    nome: string
+    preco: number
+    estoque: number
+    foto: string
+}
 
 
 function ListaProduto() {
@@ -155,6 +162,42 @@ function ListaProduto() {
 
     return (
         <>
+                    {produtos.map(produto => (
+                <Box m={2} display="flex" justifyContent="center" className='boxContainer'>
+                    <Card variant="outlined" className='cardContainer'>
+
+                        <div className='cardProduct'>
+                            <img src={produto.foto} alt="Img" />
+
+                            <div className='cardProductInfo'>
+                                <Typography variant="h5" component="h2">
+                                    {produto.nome}
+                                </Typography>
+
+                                <Typography variant="body2" component="p">
+                                    R$ {produto.preco}
+                                </Typography>
+
+                                <Typography variant="body2" component="p">
+                                    Quantidade Máx: {produto.estoque}
+                                </Typography>
+
+                            </div>
+                        </div>
+
+                        <Box display="flex" flexDirection="column" justifyContent="center" mb={1.5}>
+                            <Link to={`/carrinho/${produto.id}`} className="text-decorator-none">
+                                <Box mx={1}>
+                                    <Button variant="contained" size='small' color="secondary">
+                                        Comprar
+                                    </Button>
+                                </Box>
+                            </Link>
+                        </Box>
+
+                    </Card>
+                </Box>
+            ))}
          <Box className="page-produtos-button">    
                {buttonComponent}    
             </Box>
