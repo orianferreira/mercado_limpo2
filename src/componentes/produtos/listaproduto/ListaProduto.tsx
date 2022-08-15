@@ -58,15 +58,17 @@ function ListaProduto() {
             </Link>
         </Box>
 
-        produtoComponent =  
-               
+        produtoComponent =
+
             produtos.map(produtos => (
-            
-                
+
+
                 <Box className="box-card-produto">
-                
+
                     <div className="card">
-                        <div className="card-img"></div>
+                        <div className="card-img">
+                            <img src={produtos.foto} className="img-list-prod" />
+                        </div>
                         <div className="card-info">
                             <p className="text-title"> {produtos.nome}</p>
                             <p className="text-body">{produtos.categoria?.nome}</p>
@@ -74,9 +76,11 @@ function ListaProduto() {
                         <div className="card-footer">
                             <span className="text-title">R${produtos.preco}</span>
 
-                        
-                        <div className="card-button">
-                            <Link to={`/carrinho/${produtos.id}`} className="text-decorator-none">
+
+
+                            <div className="card-button">
+                                <Link to={`/compraProduto/${produtos.id}`} className="text-decorator-none">
+
                                     <Button >
                                         <svg className="svg-icon" viewBox="0 0 20 20">
                                             <path d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z"></path>
@@ -86,44 +90,46 @@ function ListaProduto() {
                                     </Button>
                                 </Link>
                             </div>
-                           
+
 
 
                             <div className="butons-atualizar-deletar">
-                            
-                            <Link to={`/formularioProduto/${produtos.id}`} className="text-decorator-none" >
-                                        <Button className="button-atualizar" >
-                                            Atualizar
-                                        </Button>    
+
+                                <Link to={`/formularioProduto/${produtos.id}`} className="text-decorator-none" >
+                                    <Button className="button-atualizar" >
+                                        Atualizar
+                                    </Button>
                                 </Link>
-                                <Link to={`/deletarProduto/${produtos.id}`} className="text-decorator-none">                                        
-                                        <Button className="button-deletar">
-                                            Deletar
-                                        </Button>                                       
+                                <Link to={`/deletarProduto/${produtos.id}`} className="text-decorator-none">
+                                    <Button className="button-deletar">
+                                        Deletar
+                                    </Button>
                                 </Link>
                             </div>
-                       
+
                         </div>
-                       
-                    </div>                   
-                    
+
+                    </div>
+
                 </Box>
-               
-                
+
+
             ))
-            
-        
+
+
     } else {
 
-        produtoComponent =  
-               
+        produtoComponent =
+
             produtos.map(produtos => (
-            
-                
+
+
                 <Box className="box-card-produto">
-                
+
                     <div className="card">
-                        <div className="card-img"></div>
+                        <div className="card-img">
+                            <img src={produtos.foto} className="img-prod" />
+                        </div>
                         <div className="card-info">
                             <p className="text-title"> {produtos.nome}</p>
                             <p className="text-body">{produtos.categoria?.nome}</p>
@@ -131,8 +137,8 @@ function ListaProduto() {
                         <div className="card-footer">
                             <span className="text-title">R${produtos.preco}</span>
 
-                        
-                        <div className="card-button">
+
+                            <div className="card-button">
                                 <Link to={`/login`} className="text-decorator-none">
                                     <Button >
                                         <svg className="svg-icon" viewBox="0 0 20 20">
@@ -145,30 +151,32 @@ function ListaProduto() {
                             </div>
 
                         </div>
-                       
+
                     </div>
-                    
-                    
+
+
                 </Box>
-               
-                
+
+
             ))
 
 
 
-        
+
 
     }
 
     return (
-        <>        
-         <Box className="page-produtos-button">    
-               {buttonComponent}    
+ 
+        <>
+            <Box className="page-produtos-button">
+                {buttonComponent}
             </Box>
-       
-            <Box className="page-produtos">    
-                {produtoComponent}     
-            </Box>     
+
+            <Box className="page-produtos">
+                {produtoComponent}
+
+            </Box>
         </>
     );
 }

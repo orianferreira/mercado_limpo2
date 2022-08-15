@@ -8,13 +8,19 @@
    background-color: #00c9d2;
     
 }
+.img-prod-tab{
+    justify-content: center !important;
+    min-width:100% ;
+    max-width: 75% !important;
+}
+
+
 
 /* card produto*/
-.card {
+.card-tab {
     display: flex;
     flex-direction: column;
-    max-width: 250px;
-    height: 400px;
+    max-width: 260px;
     padding: .8em;
     background: #ecebeb;
     position: relative;
@@ -22,10 +28,24 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
    }
    
-   .card-img {
+   .card-img-tab {
     background-color:  #2cb8b2;
     height: 40%;
     width: 100%;
+    border-radius: .5rem;
+    transition: .3s ease;
+   }
+   .img-prod-tab{
+    justify-content: center;
+    min-width: 100%;
+    max-width:75%;
+   }
+
+   .card-img-tab {
+    display: flex;
+    background-color:  #2cb8b2;
+    max-block-size: 120px;
+    min-block-size: 200px;
     border-radius: .5rem;
     transition: .3s ease;
    }

@@ -4,7 +4,7 @@ import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from "@
 import Produto from "../../../models/Produto";
 import useLocalStorage from "react-use-localstorage";
 import { buscar } from "../../../service/Service";
-
+import './ListaProdutoTab.css'
 import { useDispatch, useSelector } from "react-redux";
 import { TokenState } from "../../../store/token/tokenReducer";
 import { TabContext, TabPanel } from '@material-ui/lab';
@@ -51,15 +51,17 @@ function ListaProdutoTab() {
             </Link>
         </Box>
 
-        produtoComponent =  
-               
+        produtoComponent =
+
             produtos.map(produtos => (
-            
-                
+
+
                 <Box className="box-card-produto">
-                
-                    <div className="card">
-                        <div className="card-img"></div>
+
+                    <div className="card-tab">
+                        <div className="card-img-tab">
+                            <img src={produtos.foto} className="img-prod-tab" />
+                        </div>
                         <div className="card-info">
                             <p className="text-title"> {produtos.nome}</p>
                             <p className="text-body">{produtos.categoria?.nome}</p>
@@ -67,8 +69,8 @@ function ListaProdutoTab() {
                         <div className="card-footer">
                             <span className="text-title">R${produtos.preco}</span>
 
-                        
-                        <div className="card-button">
+
+                            <div className="card-button">
                                 <Link to={`/compraProduto/${produtos.id}`} className="text-decorator-none">
                                     <Button >
                                         <svg className="svg-icon" viewBox="0 0 20 20">
@@ -79,49 +81,51 @@ function ListaProdutoTab() {
                                     </Button>
                                 </Link>
                             </div>
-                           
+
 
 
                             <div className="butons-atualizar-deletar">
-                            
-                            <Link to={`/formularioProduto/${produtos.id}`} className="text-decorator-none" >
-                                        <Button className="button-atualizar" >
-                                            Atualizar
-                                        </Button>    
+
+                                <Link to={`/formularioProduto/${produtos.id}`} className="text-decorator-none" >
+                                    <Button className="button-atualizar" >
+                                        Atualizar
+                                    </Button>
                                 </Link>
-                                <Link to={`/deletarProduto/${produtos.id}`} className="text-decorator-none">                                        
-                                        <Button className="button-deletar">
-                                            Deletar
-                                        </Button>                                       
+                                <Link to={`/deletarProduto/${produtos.id}`} className="text-decorator-none">
+                                    <Button className="button-deletar">
+                                        Deletar
+                                    </Button>
                                 </Link>
                             </div>
-                       
-                            
-                           
-                           
+
+
+
+
 
                         </div>
-                       
+
                     </div>
-                    
-                    
+
+
                 </Box>
-               
-                
+
+
             ))
-            
-        
+
+
     } else {
 
-        produtoComponent =  
-               
+        produtoComponent =
+
             produtos.map(produtos => (
-            
-                
+
+
                 <Box className="box-card-produto">
-                
+
                     <div className="card">
-                        <div className="card-img"></div>
+                        <div className="card-img">
+                            <img src={produtos.foto} className="img-prod" />
+                        </div>
                         <div className="card-info">
                             <p className="text-title"> {produtos.nome}</p>
                             <p className="text-body">{produtos.categoria?.nome}</p>
@@ -129,8 +133,8 @@ function ListaProdutoTab() {
                         <div className="card-footer">
                             <span className="text-title">R${produtos.preco}</span>
 
-                        
-                        <div className="card-button">
+
+                            <div className="card-button">
                                 <Link to={`/login`} className="text-decorator-none">
                                     <Button >
                                         <svg className="svg-icon" viewBox="0 0 20 20">
@@ -142,24 +146,24 @@ function ListaProdutoTab() {
                                 </Link>
                             </div>
                         </div>
-                       
+
                     </div>
-                    
-                    
+
+
                 </Box>
-               
-                
+
+
             ))
 
 
 
-        
+
 
     }
 
     return (
-        <>        
-            {produtoComponent}         
+        <>
+            {produtoComponent}
         </>
     );
 }

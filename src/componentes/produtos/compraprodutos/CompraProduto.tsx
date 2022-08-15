@@ -45,42 +45,38 @@ function ComprarProduto() {
       
       
 
-      <Grid xs={12} className="container-prod" >
-        <Grid xs={6} className="img-prod">
-          <img className=" float" src="https://i.imgur.com/guzaifd.png" />
+      <Grid xs={12} container className="container-prod" >
+        <Grid xs={6} item className="img-prod">
+          <img className=" float" src={produtos?.foto} />
         </Grid>
 
 
-        <Grid xs={6} className="descricao-prod">
+        <Grid xs={6}  item className="descricao-prod" >
           <CardContent>
-            <Typography color="textSecondary" gutterBottom>
-              Produto
-            </Typography>
-            <Typography className='nome-prod' variant="h4" component="h2">
-              {produtos?.nome}
-            </Typography>
-
-            <div className='desc'>
-                  <Typography className='categoria-prod' variant="h6" >
-                    Categoria: {produtos?.categoria?.nome}
-                  </Typography>
-                  <Typography className='tipo-prod' variant="h6" >
-                    Tipo: {produtos?.categoria?.tipo}
-                  </Typography>
-                  <Typography className='estoque-prod' variant="h6" >
-                    Quantidade: {produtos?.estoque}
-                  </Typography>
-            </div>
-
-          </CardContent>
-
-          <Box className="box-valor"  >
-            <Grid xs={6}>
-                <Typography className="valor" variant="h6" >
-                  Valor: <div>R${produtos?.preco}</div>
+                <Typography color="textSecondary" gutterBottom>
+                       Produto
                 </Typography>
-            </Grid>
-            <Grid >
+                <Typography className='nome-prod' variant="h4" component="h2">
+                     {produtos?.nome}
+                </Typography>
+
+                <div className='desc'>
+                      <Typography className='categoria-prod' variant="h6" >
+                           Categoria: {produtos?.categoria?.nome}
+                      </Typography>
+                      <Typography className='tipo-prod' variant="h6" >
+                           Tipo: {produtos?.categoria?.tipo}
+                      </Typography>
+                      <Typography className='estoque-prod' variant="h6" >
+                           Quantidade: {produtos?.estoque}
+                      </Typography> 
+                </div>
+
+            <Box className="box-valor"  >
+
+                  <Typography className="valor" variant="h6" >
+                         Valor: <div>R${produtos?.preco}</div>
+                  </Typography>
                 <div className="card-button">
                   <Button >
                     <svg className="svg-icon" viewBox="0 0 20 20">
@@ -89,10 +85,10 @@ function ComprarProduto() {
                       <path d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
                     </svg>
                   </Button>
-                </div>
-            </Grid>
-          </Box>
-          <CardActions className='button-voltar'>
+                </div>      
+            </Box>
+
+     <CardActions className='button-voltar'>
             <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
               <Box>
                 <Button onClick={cancelar} variant="contained"  className='button-voltar-color'>
@@ -101,6 +97,11 @@ function ComprarProduto() {
               </Box>
             </Box>
           </CardActions>
+
+          </CardContent>
+
+         
+         
         </Grid>
 
 

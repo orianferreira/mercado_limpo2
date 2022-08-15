@@ -8,24 +8,35 @@
    background-color: #00c9d2;
     
 }
+.img-list-prod{
+    justify-content: center !important;
+    min-width:100% ;
+    max-width: 75% !important;
+}
 
 /* card produto*/
 .card {
     display: flex;
     flex-direction: column;
-    width: 260px;
-    height: 400px;
+    width: 260px; 
     padding: .8em;
     background: #ecebeb;
     position: relative;
     overflow: visible;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
    }
+
+   .img-prod{
+    justify-content: center;
+    min-width: 100%;
+    max-width:75%;
+   }
    
    .card-img {
+    display: flex;
     background-color:  #2cb8b2;
-    height: 40%;
-    width: 100%;
+    max-block-size: 120px;
+    min-block-size: 200px;
     border-radius: .5rem;
     transition: .3s ease;
    }
@@ -84,7 +95,7 @@
    }
 
 .butons-atualizar-deletar{
-    display: flex;
+   
     justify-content: center;
     margin-top: 20px; 
 }
@@ -92,9 +103,11 @@
 
 
 .box-card-produto{
-    display: flex;
-    flex-direction: row;
+    
+    flex-direction: row;  
     padding: 20px;
+    
+    
 }
 
 .button-deletar{
