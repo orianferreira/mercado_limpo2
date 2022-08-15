@@ -82,7 +82,6 @@ function CadastroCategoria() {
         navigate('/categoria')
     }
 
-
     return (
 
         <Grid xs={12} className="form-categoria">
