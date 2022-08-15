@@ -9,10 +9,15 @@
    
 }
 .img-prod{
-    justify-content: center;
-    min-width:50% !important;
+    justify-content: center !important;
+    min-width:50% ;
     max-width: 75% !important;
 }
+
+.img-compra-prod{
+    min-width:50% !important;
+}
+
 
 .img-prod img {
     margin-top: 10%  !important;

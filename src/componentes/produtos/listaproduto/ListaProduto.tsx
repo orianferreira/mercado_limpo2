@@ -60,7 +60,7 @@ function ListaProduto() {
 
                     <div className="card">
                         <div className="card-img">
-                            <img src={produtos.foto} className="img-prod" />
+                            <img src={produtos.foto} className="img-list-prod" />
                         </div>
                         <div className="card-info">
                             <p className="text-title"> {produtos.nome}</p>
