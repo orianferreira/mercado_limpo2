@@ -29,3 +29,15 @@
     align-items: center;
     color: #92E3A9;
 }
+
+.align-center {
+    text-align: center;
+}
+
+.texto-servicos {
+    font-weight: bold;
+}
+
+.logo-sobre {
+    color: white;
+}
