@@ -22,9 +22,9 @@
    }
 
    .img-prod{
-    justify-content: center;
-    min-width: 100%;
-    max-width:75%;
+    justify-content: center !important;
+    min-width: 100% !important;
+    max-width:100% !important;
    }
    
    .card-img {
