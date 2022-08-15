@@ -51,15 +51,17 @@ function ListaProduto() {
             </Link>
         </Box>
 
-        produtoComponent =  
-               
+        produtoComponent =
+
             produtos.map(produtos => (
-            
-                
+
+
                 <Box className="box-card-produto">
-                
+
                     <div className="card">
-                        <div className="card-img"></div>
+                        <div className="card-img">
+                            <img src={produtos.foto} className="img-prod" />
+                        </div>
                         <div className="card-info">
                             <p className="text-title"> {produtos.nome}</p>
                             <p className="text-body">{produtos.categoria?.nome}</p>
@@ -67,8 +69,8 @@ function ListaProduto() {
                         <div className="card-footer">
                             <span className="text-title">R${produtos.preco}</span>
 
-                        
-                        <div className="card-button">
+
+                            <div className="card-button">
                                 <Link to={`/compraProduto/${produtos.id}`} className="text-decorator-none">
                                     <Button >
                                         <svg className="svg-icon" viewBox="0 0 20 20">
@@ -79,44 +81,46 @@ function ListaProduto() {
                                     </Button>
                                 </Link>
                             </div>
-                           
+
 
 
                             <div className="butons-atualizar-deletar">
-                            
-                            <Link to={`/formularioProduto/${produtos.id}`} className="text-decorator-none" >
-                                        <Button className="button-atualizar" >
-                                            Atualizar
-                                        </Button>    
+
+                                <Link to={`/formularioProduto/${produtos.id}`} className="text-decorator-none" >
+                                    <Button className="button-atualizar" >
+                                        Atualizar
+                                    </Button>
                                 </Link>
-                                <Link to={`/deletarProduto/${produtos.id}`} className="text-decorator-none">                                        
-                                        <Button className="button-deletar">
-                                            Deletar
-                                        </Button>                                       
+                                <Link to={`/deletarProduto/${produtos.id}`} className="text-decorator-none">
+                                    <Button className="button-deletar">
+                                        Deletar
+                                    </Button>
                                 </Link>
                             </div>
-                       
+
                         </div>
-                       
-                    </div>                   
-                    
+
+                    </div>
+
                 </Box>
-               
-                
+
+
             ))
-            
-        
+
+
     } else {
 
-        produtoComponent =  
-               
+        produtoComponent =
+
             produtos.map(produtos => (
-            
-                
+
+
                 <Box className="box-card-produto">
-                
+
                     <div className="card">
-                        <div className="card-img"></div>
+                        <div className="card-img">
+                            <img src={produtos.foto} className="img-prod" />
+                        </div>
                         <div className="card-info">
                             <p className="text-title"> {produtos.nome}</p>
                             <p className="text-body">{produtos.categoria?.nome}</p>
@@ -124,8 +128,8 @@ function ListaProduto() {
                         <div className="card-footer">
                             <span className="text-title">R${produtos.preco}</span>
 
-                        
-                        <div className="card-button">
+
+                            <div className="card-button">
                                 <Link to={`/login`} className="text-decorator-none">
                                     <Button >
                                         <svg className="svg-icon" viewBox="0 0 20 20">
@@ -138,30 +142,30 @@ function ListaProduto() {
                             </div>
 
                         </div>
-                       
+
                     </div>
-                    
-                    
+
+
                 </Box>
-               
-                
+
+
             ))
 
 
 
-        
+
 
     }
 
     return (
         <>
-         <Box className="page-produtos-button">    
-               {buttonComponent}    
+            <Box className="page-produtos-button">
+                {buttonComponent}
             </Box>
-       
-            <Box className="page-produtos">    
-                {produtoComponent}     
-            </Box>     
+
+            <Box className="page-produtos">
+                {produtoComponent}
+            </Box>
         </>
     );
 }
