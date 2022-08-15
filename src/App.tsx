@@ -20,7 +20,6 @@ import ListaCategoria from './componentes/categoria/listacategoria/ListaCategori
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import ComprarProduto from './componentes/produtos/compraprodutos/CompraProduto';
-import Carrinho from './componentes/produtos/carrinho/Carrinho';
 
 
 
@@ -51,7 +50,6 @@ function App() {
                 <Route path="/compraProduto/:id" element={ <ComprarProduto />}/>
                 <Route path="/produtos" element={ <ListaProduto /> } />
                 <Route path="/categoria" element={ <ListaCategoria /> } />
-                <Route path="/carrinho/:id" element={<Carrinho />} />
               </Routes>
             </div>
           <Footer />
