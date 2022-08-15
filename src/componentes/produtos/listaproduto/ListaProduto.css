@@ -19,6 +19,7 @@
     display: flex;
     flex-direction: column;
     width: 260px; 
+    height: 460px !important;
     padding: .8em;
     background: #ecebeb;
     position: relative;
@@ -27,9 +28,9 @@
    }
 
    .img-prod{
-    justify-content: center;
-    min-width: 100%;
-    max-width:75%;
+    justify-content: center !important;
+    min-width: 100% !important;
+    max-width:100% !important;
    }
    
    .card-img {
@@ -136,43 +137,4 @@
 }
 .box-button-cadastra{
     margin: 0 !important;
-}
-
-.text-decorator-none{
-    text-decoration: none;
-}
-
-.boxContainer{
-    margin: 1rem 0!important;
-}
-
-img{
-    width: 250px!important;
-}
-
-.cardContainer{
-    display: flex!important;
-    align-items: center;
-    width: 700px!important;
-}
-
-.cardProduct{
-    display: flex!important;
-    align-items: center;
-}
-
-.cardProductInfo{
-    display: flex;
-    flex-direction: column;
-
-    margin-left: 50px;
-    width: 250px;
-}
-
-.cardProductButton{
-    margin-bottom: 5px;
-    text-decoration: none;
-}
-.cardProductButton button{
-    width: 200px!important;
 }

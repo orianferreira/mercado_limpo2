@@ -45,8 +45,8 @@ function ComprarProduto() {
       
       
 
-      <Grid xs={12} container className="container-prod" >
-        <Grid xs={6} item className="img-prod">
+      <Grid xs={12} container className="container-prod " >
+        <Grid xs={6} item className="img-compra-prod">
           <img className=" float" src={produtos?.foto} />
         </Grid>
 
