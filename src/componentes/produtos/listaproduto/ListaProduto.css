@@ -17,9 +17,9 @@
 /* card produto*/
 .card {
     display: flex;
-    flex-direction: column;
-    width: 260px; 
-    height: 460px !important;
+    flex-direction: column; 
+    max-width: 250px !important;
+    height: 450px !important;
     padding: .8em;
     background: #ecebeb;
     position: relative;

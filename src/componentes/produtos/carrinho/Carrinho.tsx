@@ -12,11 +12,12 @@ import './Carrinho.css'
 function Carrinho() {
 
   let history = useNavigate()
+  const { id } = useParams<{ id: string }>()
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
   // Assim como no FormularioPostagem, pegamos o Id do Produto pela URL
-  const { id } = useParams<{ id: string }>()
+
 
   // Colocar Token com Redux
 
@@ -45,7 +46,7 @@ function Carrinho() {
   // Esse Código irá pegar o ID do Produto, e acessar a service que busca as informações por ID 
 
    async function findByIdProduto(id: string) {
-     await buscarId(`produtos/${id}`, setProduto, {
+     await buscarId(`/produto/${id}`, setProduto, {
        headers: {
          'Authorization': token
        }
@@ -66,13 +67,13 @@ function Carrinho() {
   // Função que simula a compra Efetuada com sucesso
   function confirmSales() {
     alert("Compra Confirmada! Verifique o seu email!")
-    history("/")
+    history("/home")
   }
 
   return (
     <>
       <Box m={2} display="flex" justifyContent="center">
-        <Card variant="outlined" className='card'>
+        <Card variant="outlined" className='card-carrinho'>
 
           <div className='cardProduct'>
             <img src={produto.foto} alt="Img" />
