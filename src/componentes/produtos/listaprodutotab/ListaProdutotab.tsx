@@ -4,7 +4,7 @@ import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from "@
 import Produto from "../../../models/Produto";
 import useLocalStorage from "react-use-localstorage";
 import { buscar } from "../../../service/Service";
-
+import './ListaProdutoTab.css'
 import { useDispatch, useSelector } from "react-redux";
 import { TokenState } from "../../../store/token/tokenReducer";
 import { TabContext, TabPanel } from '@material-ui/lab';
@@ -58,9 +58,9 @@ function ListaProdutoTab() {
 
                 <Box className="box-card-produto">
 
-                    <div className="card">
-                        <div className="card-img">
-                            <img src={produtos.foto} className="img-prod" />
+                    <div className="card-tab">
+                        <div className="card-img-tab">
+                            <img src={produtos.foto} className="img-prod-tab" />
                         </div>
                         <div className="card-info">
                             <p className="text-title"> {produtos.nome}</p>
