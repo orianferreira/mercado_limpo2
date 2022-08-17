@@ -1,4 +1,5 @@
-import { Box, Button, Card, TextField, Typography } from "@material-ui/core"
+import { Button, Card, TextField, Typography } from "@material-ui/core"
+import { Box } from '@mui/material';
 import { ChangeEvent, useEffect, useState } from "react"
 import { useSelector } from "react-redux"
 import { Link, useNavigate, useParams } from "react-router-dom"
