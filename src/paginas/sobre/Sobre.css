@@ -41,3 +41,38 @@
 .logo-sobre {
     color: white;
 }
+
+.img-sobre-nos{
+    width: 100% !important;
+    align-items: center;
+
+}
+.top{
+
+    display: flex;
+    align-items: center; 
+}
+.mid{
+    display: flex;
+    align-items: center; 
+    flex-direction: row-reverse;
+
+}
+
+.principal-imagem-item{
+
+
+    animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

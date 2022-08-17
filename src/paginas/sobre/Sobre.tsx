@@ -15,14 +15,24 @@ function Sobre() {
                 alignItems='center'
                 className='sobre-body'
             >
-                <Grid item xs={12} className='session align-center'>
-                    <h2 className='title'>O que nós fazemos?</h2>
-                    <p>Somos o mercado limpo, um dos únicos E-commerce de energia limpa do Brasil, nosso objetivo é diminuir o consumo de fontes de energia que podem causar o efeito estufa no nosso planeta, visamos a acessibilidade a energia limpa, menor dependência de provedoras de energia, e principalmente fomentar o desenvolvimento de tecnologias sustentáveis, cada produto tem seu tipo de energia utilizada e sua escalabilidade de produção e utilização.</p>
-                    <p className='texto-servicos'>Oferecemos: Orçamento, Instalação, Suporte, Manutenção e Garantia...</p>
+                <Grid item xs={12} className='top session align-center'>
+                    <Box className='principal-imagem-item'>
+                        <img className='img-sobre-nos' src='https://i.imgur.com/xv5GzdJ.png' />
+                    </Box>
+                    <Box className='text-sobre-nos '>
+                        <h2 className='title'>O que nós fazemos?</h2>
+                        <p>Somos o mercado limpo, um dos únicos E-commerce de energia limpa do Brasil, nosso objetivo é diminuir o consumo de fontes de energia que podem causar o efeito estufa no nosso planeta, visamos a acessibilidade a energia limpa, menor dependência de provedoras de energia, e principalmente fomentar o desenvolvimento de tecnologias sustentáveis, cada produto tem seu tipo de energia utilizada e sua escalabilidade de produção e utilização.</p>
+                        <p className='texto-servicos'>Oferecemos: Orçamento, Instalação, Suporte, Manutenção e Garantia...</p>
+                    </Box>
                 </Grid>
-                <Grid item xs={12} className='session align-center'>
-                    <h2 className='title'>Missão, visão e valores</h2>
-                    <p>Nossa motivação é nossa preocupação com o meio ambiente, visando uma atitude sustentável para haver um mundo melhor no futuro, incentivando o uso de energia limpa, noção dos recursos escassos que temos no planeta e a necessidade de apoiar pequenos projetos para criação de novas tecnologias. Porque escolhemos o modelo E-commerce? Acreditamos que seria a ponte ideal, para a normalização da utilização do consumo de energia renovável no dia a dia, e para conseguir apoiar e utilizar desde cedo as novas tecnologias produzidas através da divulgação e consumo ativo no mercado.</p>
+                <Grid item xs={12} className='mid session align-center'>
+                    <Box className='principal-imagem-item'>
+                        <img className='img-sobre-nos ' src='https://i.imgur.com/eaCRCyj.png' />
+                    </Box>
+                    <Box className='text-sobre-nos'>
+                        <h2 className='title'>Missão, visão e valores</h2>
+                        <p>Nossa motivação é nossa preocupação com o meio ambiente, visando uma atitude sustentável para haver um mundo melhor no futuro, incentivando o uso de energia limpa, noção dos recursos escassos que temos no planeta e a necessidade de apoiar pequenos projetos para criação de novas tecnologias. Porque escolhemos o modelo E-commerce? Acreditamos que seria a ponte ideal, para a normalização da utilização do consumo de energia renovável no dia a dia, e para conseguir apoiar e utilizar desde cedo as novas tecnologias produzidas através da divulgação e consumo ativo no mercado.</p>
+                    </Box>
                 </Grid>
                 <Grid item xs={12}
                     container
