@@ -4,6 +4,8 @@ import { Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 import './Home.css';
 import TabProduto from '../../componentes/produtos/tabproduto/TabProduto';
+import Carousel from '../../componentes/carousel/carousel.js';
+
 
 function Home() {
   return (
@@ -12,7 +14,7 @@ function Home() {
         
         <Grid >
           <Box>
-          <img src="https://i.imgur.com/xJ5vuZ8.jpg" alt="" className='imghome' />
+          <Carousel/>
           </Box>
         </Grid>
 
