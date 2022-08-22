@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { TokenState } from "../../../store/token/tokenReducer";
 import { TabContext, TabPanel } from '@material-ui/lab';
 import TabProduto from "../tabproduto/TabProduto";
+import Carousel from "../../carousel/carousel.js";
 
 
 
@@ -112,7 +113,11 @@ function ListaProduto() {
 
         produtoComponent =
 
+
+
             produtos.map(produtos => (
+
+
 
 
                 <Box className="box-card-produto">
@@ -159,6 +164,10 @@ function ListaProduto() {
 
     return (
         <>
+
+            <Box>
+                <Carousel />
+            </Box>
             <Box className="page-produtos-button">
                 {buttonComponent}
             </Box>

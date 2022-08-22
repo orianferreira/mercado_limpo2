@@ -16,6 +16,7 @@
 
 /* card produto*/
 .card {
+    border-radius: 10px;
     display: flex;
     flex-direction: column; 
     max-width: 250px !important;
