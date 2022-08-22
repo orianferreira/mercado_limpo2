@@ -16,6 +16,7 @@
   
   .container{
     max-width: 100vw;
+    position: relative;
   
   }
   
@@ -39,7 +40,7 @@
   .container .carousel .item .image img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    
   }
   
   .container .carousel .item .info{
@@ -111,6 +112,9 @@
     justify-content: space-between;
     width: 100%;
     height: 100% !important;
+    position: absolute;
+    padding-top: 60px;
+    
     
   }
 
@@ -118,6 +122,8 @@
     transform: rotate(180deg);
   
   }
+
+  
   
 
   

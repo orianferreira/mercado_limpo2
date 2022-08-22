@@ -19,7 +19,8 @@ function Home() {
         </Grid>
 
         <Grid alignItems="center" item xs={12} >
-          <Box>
+          <Box >
+            <Box className='b'>
             <Typography
               variant="h3"
               align='center'
@@ -37,13 +38,9 @@ function Home() {
             >
               Energia limpa a um click!
             </Typography>
+            
 
-            <Box className='botao-main'>              
-                <Button variant="contained" className='button'>
-                  <Link to="/produtos" className='span'>
-                    Produtos
-                  </Link>
-                </Button>
+           
             </Box>
           
             <Grid item xs={12} >
