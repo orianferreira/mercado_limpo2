@@ -1,4 +1,4 @@
-import { Box, Button, Card, TextField, Typography } from "@material-ui/core"
+import { Box, Button, Card, TextField, Typography } from "@mui/material"
 import { ChangeEvent, useEffect, useState } from "react"
 import { useSelector } from "react-redux"
 import { Link, useNavigate, useParams } from "react-router-dom"
@@ -12,9 +12,11 @@ import './Carrinho.css'
 function Carrinho() {
 
   let history = useNavigate()
+
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
+
   // Assim como no FormularioPostagem, pegamos o Id do Produto pela URL
   const { id } = useParams<{ id: string }>()
 
@@ -25,7 +27,7 @@ function Carrinho() {
 
   // State para guardar as informações do Produto retornadas pelo Back
 
-   const [produto, setProduto] = useState<Produto>({
+  const [produto, setProduto] = useState<Produto>({
     id: 0,
     nome: "",
     descricao: "",
@@ -36,21 +38,19 @@ function Carrinho() {
 
   // Vai disparar a função findByIdProduto sempre que o ID for diferente que Undefined
 
-   useEffect(() => {
-     if (id !== undefined) {
-       findByIdProduto(id)
-     }
-   }, [id])
+  useEffect(() => {
+    if (id !== undefined) {
+      findByIdProduto(id)
+    }
+  }, [id])
 
   // Esse Código irá pegar o ID do Produto, e acessar a service que busca as informações por ID 
 
-   async function findByIdProduto(id: string) {
-     await buscarId(`produtos/${id}`, setProduto, {
-       headers: {
-         'Authorization': token
-       }
-     })
-   }
+  async function findByIdProduto(id: string) {
+    await buscarId(`produtos/${id}`, setProduto, {
+      headers: {}
+    })
+  }
 
   // Função que vai pegar a quantidade escolhida do Produto
   function handleChange(e: ChangeEvent<HTMLInputElement>) {

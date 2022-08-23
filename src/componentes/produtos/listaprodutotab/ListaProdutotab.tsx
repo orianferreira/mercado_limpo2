@@ -4,10 +4,10 @@ import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from "@
 import Produto from "../../../models/Produto";
 import useLocalStorage from "react-use-localstorage";
 import { buscar } from "../../../service/Service";
-import './ListaProdutoTab.css'
 import { useDispatch, useSelector } from "react-redux";
 import { TokenState } from "../../../store/token/tokenReducer";
 import { TabContext, TabPanel } from '@material-ui/lab';
+import './ListaProdutoTab.css'
 
 
 
@@ -15,8 +15,11 @@ import { TabContext, TabPanel } from '@material-ui/lab';
 function ListaProdutoTab() {
 
     const [produtos, setProdutos] = useState<Produto[]>([])
+
     const dispatch = useDispatch();
+
     let navigate = useNavigate();
+    
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
