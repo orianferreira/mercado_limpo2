@@ -118,7 +118,7 @@ function ListaProduto() {
             produtos.map(produtos => (
 
 
-
+            
 
                 <Box className="box-card-produto">
 
@@ -168,6 +168,9 @@ function ListaProduto() {
             <Box>
                 <Carousel />
             </Box>
+           
+            
+
             <Box className="page-produtos-button">
                 {buttonComponent}
             </Box>

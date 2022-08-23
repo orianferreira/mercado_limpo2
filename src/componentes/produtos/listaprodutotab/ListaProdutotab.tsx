@@ -53,7 +53,8 @@ function ListaProdutoTab() {
 
         produtoComponent =
 
-            produtos.map(produtos => (
+            produtos.slice(0, 4).map(produtos => (
+ 
 
 
                 <Box className="box-card-produto">
