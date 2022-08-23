@@ -48,17 +48,11 @@ function Carrinho() {
 
   async function findByIdProduto(id: string) {
     await buscarId(`produtos/${id}`, setProduto, {
-      headers: {}
+      headers: {
+        'Authorization': token
+      }
     })
   }
-  
-   async function findByIdProduto(id: string) {
-     await buscarId(`/produto/${id}`, setProduto, {
-       headers: {
-         'Authorization': token
-       }
-     })
-   }
 
   // Função que vai pegar a quantidade escolhida do Produto
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
