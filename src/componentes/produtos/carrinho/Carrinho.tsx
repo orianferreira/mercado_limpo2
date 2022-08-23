@@ -17,8 +17,8 @@ function Carrinho() {
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
-  // Assim como no FormularioPostagem, pegamos o Id do Produto pela URL
 
+  // Assim como no FormularioPostagem, pegamos o Id do Produto pela URL
 
   // Colocar Token com Redux
 
@@ -27,7 +27,7 @@ function Carrinho() {
 
   // State para guardar as informações do Produto retornadas pelo Back
 
-   const [produto, setProduto] = useState<Produto>({
+  const [produto, setProduto] = useState<Produto>({
     id: 0,
     nome: "",
     descricao: "",
@@ -38,14 +38,20 @@ function Carrinho() {
 
   // Vai disparar a função findByIdProduto sempre que o ID for diferente que Undefined
 
-   useEffect(() => {
-     if (id !== undefined) {
-       findByIdProduto(id)
-     }
-   }, [id])
+  useEffect(() => {
+    if (id !== undefined) {
+      findByIdProduto(id)
+    }
+  }, [id])
 
   // Esse Código irá pegar o ID do Produto, e acessar a service que busca as informações por ID 
 
+  async function findByIdProduto(id: string) {
+    await buscarId(`produtos/${id}`, setProduto, {
+      headers: {}
+    })
+  }
+  
    async function findByIdProduto(id: string) {
      await buscarId(`/produto/${id}`, setProduto, {
        headers: {

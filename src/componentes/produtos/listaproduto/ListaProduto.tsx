@@ -25,9 +25,7 @@ function ListaProduto() {
 
     async function getProdutos() {
         await buscar("/produto", setProdutos, {
-            headers: {
-
-            }
+            headers: {}
         })
     }
 
