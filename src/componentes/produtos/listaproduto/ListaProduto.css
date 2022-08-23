@@ -16,10 +16,11 @@
 
 /* card produto*/
 .card {
+    border-radius: 10px;
     display: flex;
-    flex-direction: column;
-    width: 260px; 
-    height: 460px !important;
+    flex-direction: column; 
+    max-width: 250px !important;
+    height: 450px !important;
     padding: .8em;
     background: #ecebeb;
     position: relative;
@@ -124,7 +125,8 @@
 
 .page-produtos {
     background-color: var(--cor-de-fundo-leve);
-    display: flex;   
+    display: flex;
+    justify-content: space-around; 
     min-height: calc(100vh - 160px);
     flex-wrap: wrap;
 }

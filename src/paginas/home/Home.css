@@ -1,4 +1,8 @@
-
+.b{
+    background-image: url(https://i.imgur.com/twkYC74.jpg);
+    height: 150px;
+    padding-top: 10px;
+}
 
 .caixa{ 
     background-Color: var(--cor-de-fundo-leve);
@@ -10,17 +14,15 @@
 }
 
 
-
-
-
 .titulo {
-    color: var(--texto-principais) !important;
+    color: var(--white) !important;
     font-weight: 600 !important;
     width: 100vw;
+    padding-top: 20px;
 }
 
 .mensagem {
-    color: black;
+    color: var(--white) !important;
     font-weight: 200 !important;
     font-size: 20px !important;
     width: 100vw;
@@ -49,6 +51,80 @@
     width: calc(100vw) !important;  
 }
 
+.container-categorias{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    
+    
+   
+    
+    
+
+    
+    
+}
+
+.titulo-categoria{
+    display: flex;
+    justify-content: center;
+   
+    
+}
+
+.titulo-categoria h6{
+    font-weight: 100;
+    font-size: 20px;
+    margin-inline: 60px;
+    margin-inline-end: 50px;
+    margin-inline-start: 65px;
+}
+
+.container-categorias h3{
+    text-align: center;
+    font-size: 25px;
+    padding:10px;
+    
+}
+
+
+.container-categorias .card-categoria .img-categoria {
+    
+    justify-content: space-between !important;
+    background-color: rgb(202, 204, 205);
+    width: 100px;
+    margin-inline: 35px;
+    margin-bottom: -25px;
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 30em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    
+ 
+}
+
+.container-categorias .card-categoria .img-categoria:hover{
+    border: 1px solid white;
+}
+
+.container-categorias .card-categoria .img-categoria:active{
+    transform: translateY(-1px); box-shadow: 4px 4px 12px #c5c5c5,
+    -4px -4px 12px #ffffff;
+}
+
+.container-categorias .card-categoria{
+    display: flex;
+    justify-content: center;
+   
+    
+}
+
+
+
 
 
 
@@ -68,13 +144,11 @@
     animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
    }
    
-   .button:hover {
-    animation: gradient 3s infinite;
+   .card-categria-solar:hover {
     transform: scale(1.05);
    }
    
-   .button:active {
-    animation: gradient 3s infinite;
+   .card-categria-solar:active {
     transform: scale(0.8);
    }
    
@@ -91,3 +165,18 @@
      background-position: 0% 50%;
     }
    }
+
+.card-categria-solar{
+   padding-top: 20px;
+    
+}
+
+
+
+.card-categria-solar h6{
+    font-weight: 100;
+    font-size: 20px;
+    padding-top: 20px;
+    
+}
+

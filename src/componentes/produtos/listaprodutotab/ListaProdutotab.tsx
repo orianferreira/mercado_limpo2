@@ -4,13 +4,11 @@ import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from "@
 import Produto from "../../../models/Produto";
 import useLocalStorage from "react-use-localstorage";
 import { buscar } from "../../../service/Service";
+import './ListaProdutoTab.css';
 import { useDispatch, useSelector } from "react-redux";
 import { TokenState } from "../../../store/token/tokenReducer";
 import { TabContext, TabPanel } from '@material-ui/lab';
 import './ListaProdutoTab.css'
-
-
-
 
 function ListaProdutoTab() {
 
@@ -56,7 +54,8 @@ function ListaProdutoTab() {
 
         produtoComponent =
 
-            produtos.map(produtos => (
+            produtos.slice(0, 4).map(produtos => (
+ 
 
 
                 <Box className="box-card-produto">
