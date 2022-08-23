@@ -21,6 +21,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import ComprarProduto from './componentes/produtos/compraprodutos/CompraProduto';
 import Carrinho from './componentes/produtos/carrinho/Carrinho';
+import Solar from './paginas/descricao/solar/Solar';
 
 
 
@@ -52,6 +53,7 @@ function App() {
                 <Route path="/produtos" element={ <ListaProduto /> } />
                 <Route path="/categoria" element={ <ListaCategoria /> } />
                 <Route path="/carrinho/:id" element={<Carrinho />} />
+                <Route path="/solar" element={<Solar />} />
               </Routes>
             </div>
           <Footer />
