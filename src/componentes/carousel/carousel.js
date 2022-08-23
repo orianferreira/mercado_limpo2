@@ -8,7 +8,7 @@ function Carousel() {
   const carousel = useRef(null);
 
   useEffect(() => {
-    fetch('https://p-i-mercado-limpo-git-main-vitorg7-2011-livecom.vercel.app/static/shoes.json')
+    fetch('http://localhost:3000/static/shoes.json')
       .then((response) => response.json())
       .then(setData);
   }, []);
