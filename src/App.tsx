@@ -22,6 +22,9 @@ import { ToastContainer } from 'react-toastify';
 import ComprarProduto from './componentes/produtos/compraprodutos/CompraProduto';
 import Carrinho from './componentes/produtos/carrinho/Carrinho';
 import Solar from './paginas/descricao/solar/Solar';
+import Eolica from './paginas/descricao/eolica/Eolica';
+import Oceanica from './paginas/descricao/oceanica/Oceanica';
+import Hidrica from './paginas/descricao/hidrica/Hidrica';
 
 
 
@@ -54,6 +57,9 @@ function App() {
                 <Route path="/categoria" element={ <ListaCategoria /> } />
                 <Route path="/carrinho/:id" element={<Carrinho />} />
                 <Route path="/solar" element={<Solar />} />
+                <Route path="/eolica" element={<Eolica />} />
+                <Route path="/oceanica" element={<Oceanica />} />
+                <Route path="/hidrica" element={<Hidrica />} />
               </Routes>
             </div>
           <Footer />

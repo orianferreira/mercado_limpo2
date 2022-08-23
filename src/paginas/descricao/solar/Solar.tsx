@@ -14,7 +14,7 @@ function Solar() {
                     <Typography variant='h6' gutterBottom color='textSecondary' component='h6' align='center' className='texto-login'>Energia solar é um termo que se refere à energia proveniente da luz e do calor do Sol. É utilizada por meio de diferentes tecnologias em constante evolução, como o aquecimento solar, a energia solar fotovoltaica, a energia heliotérmica, a arquitetura solar e a fotossíntese artificial.</Typography>
 
                     <Box display='flex' justifyContent='center' marginTop={2}>
-                        
+
                         <Box marginRight={1}>
                             <Typography variant='subtitle1' gutterBottom align='center'>Quer saber mais?</Typography>
                         </Box>
@@ -25,7 +25,7 @@ function Solar() {
                 </Box>
             </Grid>
 
-            <Grid xs={6} className='imagem2'></Grid>
+            <Grid xs={6} className='imagemSolar'></Grid>
 
         </Grid>
     );
