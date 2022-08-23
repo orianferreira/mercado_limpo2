@@ -19,7 +19,7 @@ function Hidrica() {
                             <Typography variant='subtitle1' gutterBottom align='center'>Quer saber mais?</Typography>
                         </Box>
 
-                        <Typography variant='subtitle1' gutterBottom align='center' className='texto-login'><a href="https://pt.wikipedia.org/wiki/Energia_eólica">clique aqui</a></Typography>
+                        <Typography variant='subtitle1' gutterBottom align='center' className='texto-login'><a href="https://pt.wikipedia.org/wiki/Energia_hidráulica">clique aqui</a></Typography>
 
                     </Box>
                 </Box>
