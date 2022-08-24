@@ -25,6 +25,7 @@ import Solar from './paginas/descricao/solar/Solar';
 import Eolica from './paginas/descricao/eolica/Eolica';
 import Oceanica from './paginas/descricao/oceanica/Oceanica';
 import Hidrica from './paginas/descricao/hidrica/Hidrica';
+import ShoppingCart from './shop/carrinho/ShoppingCart';
 
 
 
@@ -56,6 +57,7 @@ function App() {
                 <Route path="/produtos" element={ <ListaProduto /> } />
                 <Route path="/categoria" element={ <ListaCategoria /> } />
                 <Route path="/carrinho/:id" element={<Carrinho />} />
+                <Route path="/shop" element={ <ShoppingCart /> } />
                 <Route path="/solar" element={<Solar />} />
                 <Route path="/eolica" element={<Eolica />} />
                 <Route path="/oceanica" element={<Oceanica />} />

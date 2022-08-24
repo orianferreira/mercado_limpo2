@@ -1,0 +1,48 @@
+footer{
+    min-height: 20vh ;
+    padding:  2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebebeb;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    width: 90%;
+    list-style: none;
+    gap: 2rem;
+}
+li{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+
+    background: white;
+    
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 0.75rem;
+}
+.remove-btn{
+    border: 3px solid #7b56a0;
+    background: transparent;
+    color: #7b56a0;
+    font-weight: bold;
+    
+
+}
+
+.remove-btn:hover{
+    color: wheat;
+    background: #7b56a0;
+
+}
+.list-title{
+    font-size: 1rem;
+
+}
+.list-price{
+    font-size: 0.75rem;
+}

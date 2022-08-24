@@ -1,0 +1,83 @@
+
+body{
+    color: #333;
+    font-size: 16px;
+    font-family: sans-serif
+    
+    
+}
+
+
+.header{
+    
+    width: 100%;
+    height: 15vh;
+
+    background-color:#f8f7f7 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav{
+  
+    max-width: 900px;
+    width: 90%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.button-limpar{
+    border: none;
+    padding: 0 2rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #7B56A0 ;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    color: white;
+    font: inherit ;
+    transition: 0.5s;
+
+}
+.button-limpar:hover{
+    color: #7B56A0 ;
+    background-color: aliceblue;
+}
+
+.clean-btn{
+    max-width: 8rem;
+}
+
+
+
+
+.logo{
+    font-size: 2rem;
+    font-weight: normal;
+}
+.nav-bar-actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-width: 30%;
+}
+.nav-bar-total{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.nav-bar-total-quantidade{
+    font-size: 1rem;
+}
+.nav-bar-total-valor{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
