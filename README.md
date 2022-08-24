@@ -20,7 +20,7 @@ Caso não abra, este é o endereço da aplicação [http://localhost:3000](http:
 #### Caso queira editar a aplicação é necessário ter instalado vscode na sua máquina!
 
 A página será recarregada se você fizer edições.\
-Você também pode ver se há erros no console do navegador.\
+Você também pode ver se há erros no console do navegador.
 
 `apertando a tecla F12 ou clicando com o botão direito de depois em inspecionar...`
 
