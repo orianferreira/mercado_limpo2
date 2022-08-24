@@ -5,8 +5,8 @@
 
 ## Aplicação Open Source!
 
-Para executar esta aplicação na sua máquina é necessário ter instalado o Git e o yarn, ou npm.\
-O que for de sua preferência.
+Para executar esta aplicação na sua máquina é necessário ter instalado o Git e o yarn.\
+ou npm se for de sua preferência.
 
 ## Depois de instalar os programas necessarios, no diretório do projeto:\
 
