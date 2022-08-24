@@ -8,14 +8,14 @@
 Para executar esta aplicação na sua máquina é necessário ter instalado o Git e o yarn.\
 ou npm se for de sua preferência.
 
-## Depois de instalar os programas necessarios, no diretório do projeto:\
+## Depois de instalar os programas necessarios, no diretório do projeto:
 
 1 - clique com botão direito e escolha git bash\
 2 - digite `yarn start / npm start`
 
 A aplicação é executa no modo de desenvolvimento.\
 Ao executar abrira uma página em seu navegador com a aplicação web\
-Caso não abra, este é o endereço da aplicação [http://localhost:3000](http://localhost:3000) para visualizá-lo no navegador.
+Caso não abra, este é o endereço da aplicação [http://localhost:3000](http://localhost:3000) para visualizá-la no navegador.
 
 #### Caso queira editar a aplicação é necessário ter instalado vscode na sua máquina!
 
