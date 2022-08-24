@@ -1,6 +1,6 @@
 # Aplicação em desenvolvimento...
 
-# [Mercado limpo](https://mercado-limpo-projeto-integrador.vercel.app)
+# <div align="center">[Mercado limpo](https://mercado-limpo-projeto-integrador.vercel.app)<div/>
 ![image](https://user-images.githubusercontent.com/64613463/186281078-c23b0fd9-591b-4ecd-b33e-6f4e3bec978f.png)
 
 ## Aplicação Open Source!
@@ -28,5 +28,5 @@ Caso não queira testar a aplicação no modo de desenvolvimento e já queira te
 
 ## Se quiser saber mais sobre nós ou entrar em contato acesse:
 
-# [Sobre nós](https://mercado-limpo-projeto-integrador.vercel.app/sobre)
+# <div align="center">[Sobre nós](https://mercado-limpo-projeto-integrador.vercel.app/sobre)<div/>
 ![image](https://user-images.githubusercontent.com/64613463/186295490-3a5ca9a7-ea37-47ed-84a2-ea4830e10c10.png)
