@@ -1,7 +1,7 @@
 .imagemHidrica {
     background-image: url(https://i.imgur.com/TW97TGp.jpeg);
     background-color: var(--texto-principais);
-    border-right: 5px dotted var(--cor-de-fundo);
+    border-right: 5px solid var(--cor-de-fundo);
     background-repeat: no-repeat;
     width: 100vw;
     min-height: calc(100vh - 160px);
