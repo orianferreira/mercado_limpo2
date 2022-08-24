@@ -25,3 +25,8 @@ Você também pode ver se há erros no console do navegador.\
 `apertando a tecla F12 ou clicando com o botão direito de depois em inspecionar...`
 
 Caso não queira testar a aplicação no modo de desenvolvimento e já queira testar a versão v0.1 aqui esta no link ( [Mercado limpo](https://mercado-limpo-projeto-integrador.vercel.app) ).
+
+## Se quiser saber mais sobre nós ou entrar em contato acesse:
+
+# [Sobre nós](https://mercado-limpo-projeto-integrador.vercel.app/sobre)
+![image](https://user-images.githubusercontent.com/64613463/186295490-3a5ca9a7-ea37-47ed-84a2-ea4830e10c10.png)
